@@ -503,13 +503,13 @@ var gFiles = 0;//add list school
             <table width="100%" border="0" align="center" cellpadding="1" cellspacing="1">
               <tr>
                 <td  align="left" style="background-color:#FFFFFF; display:<?=(($pri =='100' || $pri =='80')?"":"none")?>; "><nobr><a href="addtrip.php<?=$view != "all" ? "?view=all" : "?view=owner"?>"><img src="images/16x16/monitor.png" width="16" height="16" border="0">รายงาน<?=$view != "all" ทั้งหมดทุกคน"ส่วนบุคคล"?></a></td>/td>
-                <td  align="left" style="background-color:#FFFFFF"><nobr><a href="listallproject.php"><img src="images/16x16/monitor.png" width="16" height="16" border="0">ÃÒÂ§Ò¹¨Óá¹¡â¤Ã§¡ÒÃ·Ñé§ËÁ´</a></td>
-                <td  align="left" style="background-color:#FFFFFF"><nobr><a href="costByProject.php"><img src="images/16x16/monitor.png" width="16" height="16" border="0">ÃÒÂ§Ò¹¤èÒãªé¨èÒÂµÒÁËÁÇ´µé¹·Ø¹</a></td>
-                <td  align="left" style="background-color:#FFFFFF"><nobr><a href="listalltypecost.php"><img src="images/16x16/monitor.png" width="16" height="16" border="0">ÃÒÂ§Ò¹ËÁÇ´¤èÒãªé¨èÒÂ</a></td>
-                <td  align="left" style="background-color:#FFFFFF"><nobr><a href="report_staff.php" target="_blank"><img src="images/16x16/monitor.png" width="16" height="16" border="0">ÃÒÂ§Ò¹ËÁÇ´¤èÒãªé¨èÒÂµÒÁªèÇ§àÇÅÒ</a></td>
-                <td  align="left" style="background-color:#FFFFFF"><nobr><a href="listprojectyear.php"><img src="images/16x16/monitor.png" width="16" height="16" border="0">ÃÒÂ§Ò¹ÊÃØ»¡ÒÃà´Ô¹·Ò§</a></td>
-                <td  align="left" style="background-color:#FFFFFF; display:<?=(($pri =='100')?"":"none")?>;"><nobr><a href="addtype_project.php"><img src="images/16x16/monitor.png" width="16" height="16" border="0">à¾ÔèÁâ¤Ã§¡ÒÃ</a></td>
-                <td  align="left" style="background-color:#FFFFFF; display:<?=(($pri =='100')?"":"none")?>;"><nobr><a href="setproject.php"><img src="images/16x16/monitor.png" width="16" height="16" border="0">»ÃÑºâ¤Ã§¡ÒÃ·Ñé§ËÁ´</a><a href="listallproject.php"></a></td>
+                <td  align="left" style="background-color:#FFFFFF"><nobr><a href="listallproject.php"><img src="images/16x16/monitor.png" width="16" height="16" border="0">รายงานจำแนกโครงการทั้งหมด</a></td>
+                <td  align="left" style="background-color:#FFFFFF"><nobr><a href="costByProject.php"><img src="images/16x16/monitor.png" width="16" height="16" border="0">รายงานค่าใช้จ่ายตามหมวดต้นทุน</a></td>
+                <td  align="left" style="background-color:#FFFFFF"><nobr><a href="listalltypecost.php"><img src="images/16x16/monitor.png" width="16" height="16" border="0">รายงานหมวดค่าใช้จ่าย</a></td>
+                <td  align="left" style="background-color:#FFFFFF"><nobr><a href="report_staff.php" target="_blank"><img src="images/16x16/monitor.png" width="16" height="16" border="0">รายงานหมวดค่าใช้จ่ายตามช่วงเวลา</a></td>
+                <td  align="left" style="background-color:#FFFFFF"><nobr><a href="listprojectyear.php"><img src="images/16x16/monitor.png" width="16" height="16" border="0">รายงานสรุปการเดินทาง</a></td>
+                <td  align="left" style="background-color:#FFFFFF; display:<?=(($pri =='100')?"":"none")?>;"><nobr><a href="addtype_project.php"><img src="images/16x16/monitor.png" width="16" height="16" border="0">เพิ่มโครงการ</a></td>
+                <td  align="left" style="background-color:#FFFFFF; display:<?=(($pri =='100')?"":"none")?>;"><nobr><a href="setproject.php"><img src="images/16x16/monitor.png" width="16" height="16" border="0">ปรับโครงการทั้งหมด</a><a href="listallproject.php"></a></td>
               </tr>
             </table>
               <? }
@@ -526,11 +526,11 @@ var gFiles = 0;//add list school
 
 				<table width="95%" border="0" align="center" cellpadding="1" cellspacing="5">
                   <tr>
-                    <td colspan="2" align="left" class="style4">&nbsp;&nbsp;ËÁÇ´ÃÒÂ¡ÒÃ¤èÒãªé¨èÒÂ</td>
+                    <td colspan="2" align="left" class="style4">&nbsp;&nbsp;หมวดรายการค่าใช้จ่าย</td>
                     </tr>
                   <tr>
-                    <td width="5%" align="center"><img src="images/webcam.png" title="áÊ´§·Ñé§ËÁ´" width="24" height="24"></td>
-                    <td width="45%" style="background-color:#FFFFFF"><nobr>&nbsp;<a href="?showall=y&year_r=<?=$year_r?>&view=<?=$view?>">áÊ´§·Ñé§ËÁ´<?=$view != "all" ? "¢Í§ $_SESSION[name] $_SESSION[surname]" : "¢Í§·Ø¡¤¹ã¹ÃÐºº"?></a>&nbsp;</td>
+                    <td width="5%" align="center"><img src="images/webcam.png" title="แสดงทั้งหมด" width="24" height="24"></td>
+                    <td width="45%" style="background-color:#FFFFFF"><nobr>&nbsp;<a href="?showall=y&year_r=<?=$year_r?>&view=<?=$view?>">แสดงทั้งหมด<?=$view != "all" ? "¢Í§ $_SESSION[name] $_SESSION[surname]" "ของทุกคนในระบบ"?></a>&nbsp;</td>
                     </tr>
                   <tr>
                     <td align="center"><img src="images/pie_chart2.png" title="à©¾ÒÐ·ÕèÂÑ§´Óà¹Ô¹¡ÒÃ" width="24" height="24"></td>
