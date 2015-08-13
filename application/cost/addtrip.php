@@ -135,13 +135,13 @@ if ($_SERVER[REQUEST_METHOD] == "POST"){
 					
 					if($result){
 
-			  			echo "<script language='javascript'>alert('ä´é·Ó¡ÒÃºÑ¹·Ö¡TripáÅéÇ!');</script>" ;
+			  			echo "<script language='javascript'>alert('ได้ทำการบันทึกTripแล้ว!');</script>" ;
 
 			  			echo "<meta http-equiv='refresh' content='0;url=addtrip.php'>" ;
 
 						exit;
 
-					}else{	echo "äÁèÊÒÁÒÃ¶ºÑ¹·Ö¡¢éÍÁÙÅä´é ";}
+					}else{	echo "ไม่สามารถบันทึกข้อมูลได้ ";}
 
 				}
 
@@ -179,7 +179,7 @@ if ($_SERVER[REQUEST_METHOD] == "POST"){
 
 		{
 
-			$msg = "<b class='blue'>Complete</b><br>äÁèÊÒÁÒÃ¶Åº¢éÍÁÙÅä´éà¹×èÍ§¨Ò¡ÁÕ¢éÍÁÙÅÀÒÂã¹ Trip ¹Õé";
+			$msg = "<b class='blue'>Complete</b><br>ไม่สามารถลบข้อมูลได้เนื่องจากมีข้อมูลภายใน Trip นี้";
 
 	echo $msg;
 
@@ -214,7 +214,7 @@ if ($_SERVER[REQUEST_METHOD] == "POST"){
 		?>
 <html>
 <head>
-<title>ÃÒÂ§Ò¹¤èÒãªé¨èÒÂã¹¡ÒÃÍÍ¡»¯ÔºÑµÔ§Ò¹</title>
+<title>รายงานค่าใช้จ่ายในการออกปฏิบัติงาน</title>
 <meta http-equiv="Content-Type" content="text/html; charset=tis-620">
 <link href="cost.css" type="text/css" rel="stylesheet">
 
@@ -348,7 +348,7 @@ var gFiles = 0;//add list school
 
 	function removeFile(gFiles){
 		var obj = document.getElementById('file-'+gFiles);
-		if(confirm('µéÍ§¡ÒÃÅºÃÒÂ¡ÒÃ¹ÕéãªèËÃ×ÍäÁè')==true){
+		if(confirm('ต้องการลบรายการนี้ใช่หรือไม่')==true){
 			obj.parentNode.removeChild(obj);
 		}
 	}
@@ -365,13 +365,13 @@ var gFiles = 0;//add list school
 
 		if (!f1.tripname.value){
 
-		alert("¡ÃØ³ÒÃÐºØª×èÍTrip");
+		alert("กรุณาระบุชื่อTrip");
 
 			return false;
 
 		}else if ( f1.getdayA.value == "" || f1.getdayB.value == "" ){
 
-		alert("¡ÃØ³ÒÃÐºØª×èÍªèÇ§ÇÑ¹à´Ô¹·Ò§");
+		alert("กรุณาระบุชื่อช่วงวันเดินทาง");
 
 			return false;
 
@@ -420,7 +420,7 @@ var gFiles = 0;//add list school
 
 		<table width="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="#2C2C9E">
           <tr>
-            <td height="30" colspan="2"><B class="pheader">&nbsp;ÃÒÂ¡ÒÃ Trip ÃËÑÊ¡ÒÃà´Ô¹·Ò§ </B></td>
+            <td height="30" colspan="2"><B class="pheader">&nbsp;รายการ Trip รหัสการเดินทาง</B></td>
 
           </tr>
 
@@ -484,7 +484,7 @@ var gFiles = 0;//add list school
                 
 				<? $user_id = $_SESSION[userid_origin] ? $_SESSION[userid_origin] : $_SESSION[userid]?>
                 
-    			<a href="<?=($pri =='100')?"list_user.php":"add_user.php?action=edit&id=$user_id"?>" target="_blank"><img src="images/16x16/toolbox.png" width="16" height="16" border="0" alt="<?=($pri =='100')?"»ÃÑº»ÃØ§ ÃÒÂª×èÍ User":"»ÃÑº»ÃØ§ User "?>"></a>
+    			<a href="<?=($pri =='100')?"list_user.php":"add_user.php?action=edit&id=$user_id"?>" target="_blank"><img src="images/16x16/toolbox.png" width="16" height="16" border="0" alt="<?=($pri =='100')?"ปรับปรุง รายชื่อ User":"ปรับปรุง User "?>"></a>
                 <?
                 if($pri =='100'){
 				?>
