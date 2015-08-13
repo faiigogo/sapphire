@@ -72,7 +72,7 @@ if ($_SERVER[REQUEST_METHOD] == "POST"){
 					}
 				}
 
-	  			echo "<script language='javascript'>alert('ได้ทำการปรับปรุงTripแล้ว!');</script>" ;
+	  			echo "<script language='javascript'>alert('เนเธ”เนเธ—เธณเธเธฒเธฃเธเธฃเธฑเธเธเธฃเธธเธTripเนเธฅเนเธง!');</script>" ;
 				
 	  			echo "<meta http-equiv='refresh' content='0;url=addtrip.php'>" ;
 					  
@@ -135,13 +135,13 @@ if ($_SERVER[REQUEST_METHOD] == "POST"){
 					
 					if($result){
 
-			  			echo "<script language='javascript'>alert('ได้ทำการบันทึกTripแล้ว!');</script>" ;
+			  			echo "<script language='javascript'>alert('รคยดรฉยทร“ยกร’รยบร‘ยนยทร–ยกTripรกร…รฉร!');</script>" ;
 
 			  			echo "<meta http-equiv='refresh' content='0;url=addtrip.php'>" ;
 
 						exit;
 
-					}else{	echo "ไม่สามารถบันทึกข้อมูลได้ ";}
+					}else{	echo "รครรจรร’รร’รยถยบร‘ยนยทร–ยกยขรฉรรรร…รคยดรฉ ";}
 
 				}
 
@@ -179,7 +179,7 @@ if ($_SERVER[REQUEST_METHOD] == "POST"){
 
 		{
 
-			$msg = "<b class='blue'>Complete</b><br>ไม่สามารถลบข้อมูลได้เนื่องจากมีข้อมูลภายใน Trip นี้";
+			$msg = "<b class='blue'>Complete</b><br>รครรจรร’รร’รยถร…ยบยขรฉรรรร…รคยดรฉร ยนร—รจรยงยจร’ยกรร•ยขรฉรรรร…ร€ร’รรฃยน Trip ยนร•รฉ";
 
 	echo $msg;
 
@@ -214,7 +214,7 @@ if ($_SERVER[REQUEST_METHOD] == "POST"){
 		?>
 <html>
 <head>
-<title>รายงานค่าใช้จ่ายในการออกปฏิบัติงาน</title>
+<title>รร’รยงร’ยนยครจร’รฃยชรฉยจรจร’รรฃยนยกร’รรรยกยปยฏร”ยบร‘ยตร”ยงร’ยน</title>
 <meta http-equiv="Content-Type" content="text/html; charset=tis-620">
 <link href="cost.css" type="text/css" rel="stylesheet">
 
@@ -348,7 +348,7 @@ var gFiles = 0;//add list school
 
 	function removeFile(gFiles){
 		var obj = document.getElementById('file-'+gFiles);
-		if(confirm('ต้องการลบรายการนี้ใช่หรือไม่')==true){
+		if(confirm('ยตรฉรยงยกร’รร…ยบรร’รยกร’รยนร•รฉรฃยชรจรรร—รรครรจ')==true){
 			obj.parentNode.removeChild(obj);
 		}
 	}
@@ -365,13 +365,13 @@ var gFiles = 0;//add list school
 
 		if (!f1.tripname.value){
 
-		alert("กรุณาระบุชื่อTrip");
+		alert("ยกรรยณร’รรยบรยชร—รจรTrip");
 
 			return false;
 
 		}else if ( f1.getdayA.value == "" || f1.getdayB.value == "" ){
 
-		alert("กรุณาระบุชื่อช่วงวันเดินทาง");
+		alert("ยกรรยณร’รรยบรยชร—รจรยชรจรยงรร‘ยนร ยดร”ยนยทร’ยง");
 
 			return false;
 
@@ -415,12 +415,12 @@ var gFiles = 0;//add list school
         <td valign="top" bgcolor="#D3D3D3" >
 		
 		<?
-	include("header_cost.php"); // หัวโปรแกรม
+	include("header_cost.php"); // รร‘รรขยปรรกยกรร
 		?>
 
 		<table width="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="#2C2C9E">
           <tr>
-            <td height="30" colspan="2"><B class="pheader">&nbsp;รายการ Trip รหัสการเดินทาง </B></td>
+            <td height="30" colspan="2"><B class="pheader">&nbsp;รร’รยกร’ร Trip รรร‘รยกร’รร ยดร”ยนยทร’ยง </B></td>
 
           </tr>
 
@@ -484,11 +484,11 @@ var gFiles = 0;//add list school
                 
 				<? $user_id = $_SESSION[userid_origin] ? $_SESSION[userid_origin] : $_SESSION[userid]?>
                 
-    			<a href="<?=($pri =='100')?"list_user.php":"add_user.php?action=edit&id=$user_id"?>" target="_blank"><img src="images/16x16/toolbox.png" width="16" height="16" border="0" alt="<?=($pri =='100')?"ปรับปรุง รายชื่อ User":"ปรับปรุง User "?>"></a>
+    			<a href="<?=($pri =='100')?"list_user.php":"add_user.php?action=edit&id=$user_id"?>" target="_blank"><img src="images/16x16/toolbox.png" width="16" height="16" border="0" alt="<?=($pri =='100')?"ยปรร‘ยบยปรรยง รร’รยชร—รจร User":"ยปรร‘ยบยปรรยง User "?>"></a>
                 <?
                 if($pri =='100'){
 				?>
-    			<a href="alert_report.php" target="_blank"><img src="images/16x16/sms.png" width="16" height="16" border="0" alt="รายชื่อผู้ปิดทริปช้า"></a>
+    			<a href="alert_report.php" target="_blank"><img src="images/16x16/sms.png" width="16" height="16" border="0" alt="รร’รยชร—รจรยผรรฉยปร”ยดยทรร”ยปยชรฉร’"></a>
     			<? }?>
                 </td>
 
@@ -502,14 +502,14 @@ var gFiles = 0;//add list school
             </table>  
             <table width="100%" border="0" align="center" cellpadding="1" cellspacing="1">
               <tr>
-                <td  align="left" style="background-color:#FFFFFF; display:<?=(($pri =='100' || $pri =='80')?"":"none")?>; "><nobr><a href="addtrip.php<?=$view != "all" ? "?view=all" : "?view=owner"?>"><img src="images/16x16/monitor.png" width="16" height="16" border="0">รายงาน<?=$view != "all" ? "ทั้งหมดทุกคน" : "ส่วนบุคคล"?></a></td>
-                <td  align="left" style="background-color:#FFFFFF"><nobr><a href="listallproject.php"><img src="images/16x16/monitor.png" width="16" height="16" border="0">รายงานจำแนกโครงการทั้งหมด</a></td>
-                <td  align="left" style="background-color:#FFFFFF"><nobr><a href="costByProject.php"><img src="images/16x16/monitor.png" width="16" height="16" border="0">รายงานค่าใช้จ่ายตามหมวดต้นทุน</a></td>
-                <td  align="left" style="background-color:#FFFFFF"><nobr><a href="listalltypecost.php"><img src="images/16x16/monitor.png" width="16" height="16" border="0">รายงานหมวดค่าใช้จ่าย</a></td>
-                <td  align="left" style="background-color:#FFFFFF"><nobr><a href="report_staff.php" target="_blank"><img src="images/16x16/monitor.png" width="16" height="16" border="0">รายงานหมวดค่าใช้จ่ายตามช่วงเวลา</a></td>
-                <td  align="left" style="background-color:#FFFFFF"><nobr><a href="listprojectyear.php"><img src="images/16x16/monitor.png" width="16" height="16" border="0">รายงานสรุปการเดินทาง</a></td>
-                <td  align="left" style="background-color:#FFFFFF; display:<?=(($pri =='100')?"":"none")?>;"><nobr><a href="addtype_project.php"><img src="images/16x16/monitor.png" width="16" height="16" border="0">เพิ่มโครงการ</a></td>
-                <td  align="left" style="background-color:#FFFFFF; display:<?=(($pri =='100')?"":"none")?>;"><nobr><a href="setproject.php"><img src="images/16x16/monitor.png" width="16" height="16" border="0">ปรับโครงการทั้งหมด</a><a href="listallproject.php"></a></td>
+                <td  align="left" style="background-color:#FFFFFF; display:<?=(($pri =='100' || $pri =='80')?"":"none")?>; "><nobr><a href="addtrip.php<?=$view != "all" ? "?view=all" : "?view=owner"?>"><img src="images/16x16/monitor.png" width="16" height="16" border="0">รร’รยงร’ยน<?=$view != "all" ? "ยทร‘รฉยงรรยดยทรยกยคยน" : "รรจรยนยบรยคยคร…"?></a></td>
+                <td  align="left" style="background-color:#FFFFFF"><nobr><a href="listallproject.php"><img src="images/16x16/monitor.png" width="16" height="16" border="0">รร’รยงร’ยนยจร“รกยนยกรขยครยงยกร’รยทร‘รฉยงรรยด</a></td>
+                <td  align="left" style="background-color:#FFFFFF"><nobr><a href="costByProject.php"><img src="images/16x16/monitor.png" width="16" height="16" border="0">รร’รยงร’ยนยครจร’รฃยชรฉยจรจร’รยตร’รรรรยดยตรฉยนยทรยน</a></td>
+                <td  align="left" style="background-color:#FFFFFF"><nobr><a href="listalltypecost.php"><img src="images/16x16/monitor.png" width="16" height="16" border="0">รร’รยงร’ยนรรรยดยครจร’รฃยชรฉยจรจร’ร</a></td>
+                <td  align="left" style="background-color:#FFFFFF"><nobr><a href="report_staff.php" target="_blank"><img src="images/16x16/monitor.png" width="16" height="16" border="0">รร’รยงร’ยนรรรยดยครจร’รฃยชรฉยจรจร’รยตร’รยชรจรยงร รร…ร’</a></td>
+                <td  align="left" style="background-color:#FFFFFF"><nobr><a href="listprojectyear.php"><img src="images/16x16/monitor.png" width="16" height="16" border="0">รร’รยงร’ยนรรรยปยกร’รร ยดร”ยนยทร’ยง</a></td>
+                <td  align="left" style="background-color:#FFFFFF; display:<?=(($pri =='100')?"":"none")?>;"><nobr><a href="addtype_project.php"><img src="images/16x16/monitor.png" width="16" height="16" border="0">ร ยพร”รจรรขยครยงยกร’ร</a></td>
+                <td  align="left" style="background-color:#FFFFFF; display:<?=(($pri =='100')?"":"none")?>;"><nobr><a href="setproject.php"><img src="images/16x16/monitor.png" width="16" height="16" border="0">ยปรร‘ยบรขยครยงยกร’รยทร‘รฉยงรรยด</a><a href="listallproject.php"></a></td>
               </tr>
             </table>
               <? }
@@ -526,31 +526,31 @@ var gFiles = 0;//add list school
 
 				<table width="95%" border="0" align="center" cellpadding="1" cellspacing="5">
                   <tr>
-                    <td colspan="2" align="left" class="style4">&nbsp;&nbsp;หมวดรายการค่าใช้จ่าย</td>
+                    <td colspan="2" align="left" class="style4">&nbsp;&nbsp;รรรยดรร’รยกร’รยครจร’รฃยชรฉยจรจร’ร</td>
                     </tr>
                   <tr>
-                    <td width="5%" align="center"><img src="images/webcam.png" title="แสดงทั้งหมด" width="24" height="24"></td>
-                    <td width="45%" style="background-color:#FFFFFF"><nobr>&nbsp;<a href="?showall=y&year_r=<?=$year_r?>&view=<?=$view?>">แสดงทั้งหมด<?=$view != "all" ? "ของ $_SESSION[name] $_SESSION[surname]" : "ของทุกคนในระบบ"?></a>&nbsp;</td>
+                    <td width="5%" align="center"><img src="images/webcam.png" title="รกรยดยงยทร‘รฉยงรรยด" width="24" height="24"></td>
+                    <td width="45%" style="background-color:#FFFFFF"><nobr>&nbsp;<a href="?showall=y&year_r=<?=$year_r?>&view=<?=$view?>">รกรยดยงยทร‘รฉยงรรยด<?=$view != "all" ? "ยขรยง $_SESSION[name] $_SESSION[surname]" : "ยขรยงยทรยกยคยนรฃยนรรยบยบ"?></a>&nbsp;</td>
                     </tr>
                   <tr>
-                    <td align="center"><img src="images/pie_chart2.png" title="เฉพาะที่ยังดำเนินการ" width="24" height="24"></td>
-                    <td style="background-color:#FFFFFF"><nobr>&nbsp;<a href="?nonfin=y&showall=&year_r=<?=$year_r?>&view=<?=$view?>">เฉพาะที่ยังดำเนินการ</a>&nbsp;</td>
+                    <td align="center"><img src="images/pie_chart2.png" title="ร ยฉยพร’รยทร•รจรร‘ยงยดร“ร ยนร”ยนยกร’ร" width="24" height="24"></td>
+                    <td style="background-color:#FFFFFF"><nobr>&nbsp;<a href="?nonfin=y&showall=&year_r=<?=$year_r?>&view=<?=$view?>">ร ยฉยพร’รยทร•รจรร‘ยงยดร“ร ยนร”ยนยกร’ร</a>&nbsp;</td>
                     </tr>
                   <tr>
-                    <td align="center"><img src="images/promo_violet.png" title="สรุปค่าใช้จ่ายเสร็จสิ้น" width="24" height="24"></td>
-                    <td style="background-color:#FFFFFF"><nobr>&nbsp;<a href="?cleartrip=y&showall=&year_r=<?=$year_r?>&view=<?=$view?>">สรุปค่าใช้จ่ายเสร็จสิ้น</a>&nbsp;</td>
+                    <td align="center"><img src="images/promo_violet.png" title="รรรยปยครจร’รฃยชรฉยจรจร’รร รรรงยจรร”รฉยน" width="24" height="24"></td>
+                    <td style="background-color:#FFFFFF"><nobr>&nbsp;<a href="?cleartrip=y&showall=&year_r=<?=$year_r?>&view=<?=$view?>">รรรยปยครจร’รฃยชรฉยจรจร’รร รรรงยจรร”รฉยน</a>&nbsp;</td>
                     </tr>
                   <tr>
-                    <td align="center"><img src="images/promo_green.png" title="ผ่านการตรวจรับเอกสารรอการอนุมัติ" width="24" height="24"></td>
-                    <td style="background-color:#FFFFFF"><nobr>&nbsp;<a href="?close=y&showall=&year_r=<?=$year_r?>&view=<?=$view?>">ผ่านการตรวจรับเอกสาร รอการอนุมัติ</a>&nbsp;</td>
+                    <td align="center"><img src="images/promo_green.png" title="ยผรจร’ยนยกร’รยตรรยจรร‘ยบร รยกรร’รรรยกร’รรยนรรร‘ยตร”" width="24" height="24"></td>
+                    <td style="background-color:#FFFFFF"><nobr>&nbsp;<a href="?close=y&showall=&year_r=<?=$year_r?>&view=<?=$view?>">ยผรจร’ยนยกร’รยตรรยจรร‘ยบร รยกรร’ร รรยกร’รรยนรรร‘ยตร”</a>&nbsp;</td>
                     </tr>
                   <tr>
-                    <td align="center"><img src="images/promo_orange.png" title="บันทึกรายการค่าใช้จ่ายเสร็จสิ้น" width="24" height="24"></td>
-                    <td style="background-color:#FFFFFF"><nobr>&nbsp;<a href="?endtrip=y&showall=&year_r=<?=$year_r?>&view=<?=$view?>">บันทึกรายการค่าใช้จ่ายเสร็จสิ้น</a>&nbsp;</td>
+                    <td align="center"><img src="images/promo_orange.png" title="ยบร‘ยนยทร–ยกรร’รยกร’รยครจร’รฃยชรฉยจรจร’รร รรรงยจรร”รฉยน" width="24" height="24"></td>
+                    <td style="background-color:#FFFFFF"><nobr>&nbsp;<a href="?endtrip=y&showall=&year_r=<?=$year_r?>&view=<?=$view?>">ยบร‘ยนยทร–ยกรร’รยกร’รยครจร’รฃยชรฉยจรจร’รร รรรงยจรร”รฉยน</a>&nbsp;</td>
                     </tr>
                   <tr>
-                    <td align="center"><img src="images/promo_red.png" title="อยู่ในระหว่างการป้อนรายการ" width="24" height="24"></td>
-                    <td style="background-color:#FFFFFF"><nobr>&nbsp;<a href="?entry=y&showall=&year_r=<?=$year_r?>&view=<?=$view?>">อยู่ในระหว่างการป้อนรายการ</a>&nbsp;</td>
+                    <td align="center"><img src="images/promo_red.png" title="รรรรจรฃยนรรรรรจร’ยงยกร’รยปรฉรยนรร’รยกร’ร" width="24" height="24"></td>
+                    <td style="background-color:#FFFFFF"><nobr>&nbsp;<a href="?entry=y&showall=&year_r=<?=$year_r?>&view=<?=$view?>">รรรรจรฃยนรรรรรจร’ยงยกร’รยปรฉรยนรร’รยกร’ร</a>&nbsp;</td>
                     </tr>
                 </table>
 				
@@ -563,7 +563,7 @@ var gFiles = 0;//add list school
             </table>
 
             <?
-			// หาปี 					
+			// รร’ยปร• 					
 
 						$previous_url = " <div align=right> &nbsp;     ";   
 
@@ -616,13 +616,13 @@ var gFiles = 0;//add list school
 				<table width="100%" border="0" cellspacing="0" cellpadding="0">
                   <tr>
                     <td>&nbsp;<?=$previous_url?></td>
-                    <td><strong>พ.ศ.<?=$year_r?></strong></td>
+                    <td><strong>ยพ.ร.<?=$year_r?></strong></td>
                     <td><?=$next_url?>&nbsp;</td>
                   </tr>
                 </table></td>
                 <td width="68%" align="center">&nbsp;</td>
 
-                <td width="16%" align="right"><a href="?action=add"><img src="images/add.png" width="24" height="24" border="0">เพิ่มรายการ Trip</a>&nbsp;&nbsp;</td>
+                <td width="16%" align="right"><a href="?action=add"><img src="images/add.png" width="24" height="24" border="0">ร ยพร”รจรรร’รยกร’ร Trip</a>&nbsp;&nbsp;</td>
 
               </tr>
 
@@ -632,31 +632,31 @@ var gFiles = 0;//add list school
 
               <tr bgcolor="#A3B2CC">
 
-                <td width="4%" height="25" align="center" bgcolor="#2A007C" class="style4"><b>ลำดับ</b></td>
+                <td width="4%" height="25" align="center" bgcolor="#2A007C" class="style4"><b>ร…ร“ยดร‘ยบ</b></td>
 
                 <td width="4%" height="25" align="center" bgcolor="#2A007C" class="style4">&nbsp;</td>
 
-                <td width="9%" height="25" align="center" bgcolor="#2A007C" class="style4"><strong>รหัสTrip</strong></td>
+                <td width="9%" height="25" align="center" bgcolor="#2A007C" class="style4"><strong>รรร‘รTrip</strong></td>
 
-                <td width="30%" height="25" align="center" bgcolor="#2A007C" class="style4"><strong>ชื่อTrip</strong></td>
+                <td width="30%" height="25" align="center" bgcolor="#2A007C" class="style4"><strong>ยชร—รจรTrip</strong></td>
 
                 <?
 
 			if($pri =='100' || $pri =='80'){
-			echo "<td align=\"center\" height=\"25\" align=\"center\" bgcolor=\"#2A007C\" class=\"style4\"><strong>ชื่อStaff</strong></td>";
+			echo "<td align=\"center\" height=\"25\" align=\"center\" bgcolor=\"#2A007C\" class=\"style4\"><strong>ยชร—รจรStaff</strong></td>";
 			}
 			?>
-                <td width="33%" height="25" align="center" bgcolor="#2A007C" class="style4"><strong>หมายเหตุ</strong></td>
+                <td width="33%" height="25" align="center" bgcolor="#2A007C" class="style4"><strong>รรร’รร รยตร</strong></td>
 			<?
 			if($pri =='100' || $pri =='80'){
-			echo "<td align=\"center\" height=\"25\" align=\"center\" bgcolor=\"#2A007C\" class=\"style4\"><nobr>&nbsp;ทำรายการ&nbsp;</nobr>อนุมัติ</td>";
-			echo "<td align=\"center\" height=\"25\" align=\"center\" bgcolor=\"#2A007C\" class=\"style4\">ออกรายงาน GL</td>";
+			echo "<td align=\"center\" height=\"25\" align=\"center\" bgcolor=\"#2A007C\" class=\"style4\"><nobr>&nbsp;ยทร“รร’รยกร’ร&nbsp;</nobr>รยนรรร‘ยตร”</td>";
+			echo "<td align=\"center\" height=\"25\" align=\"center\" bgcolor=\"#2A007C\" class=\"style4\">รรยกรร’รยงร’ยน GL</td>";
 			}
 			?>
 
-                <td width="12%" height="25" align="center" bgcolor="#2A007C" class="style4"><strong>เครื่องมือ</strong></td>
+                <td width="12%" height="25" align="center" bgcolor="#2A007C" class="style4"><strong>ร ยครร—รจรยงรร—ร</strong></td>
 				<? if($pri == "100"){?>
-                <td width="8%" align="center" bgcolor="#2A007C" class="style4"><strong>ล้างสถานะ</strong></td>
+                <td width="8%" align="center" bgcolor="#2A007C" class="style4"><strong>ร…รฉร’ยงรยถร’ยนร</strong></td>
 				<? } ?>
               </tr>
 
@@ -677,11 +677,11 @@ var gFiles = 0;//add list school
 			//$cond = " AND trip.trip_status <= '4' ";
 		}else  if($nonfin=="y"){	
 			$cond = " AND trip.trip_status < '4' ";
-		}else{ // กรณี DEFAULF ที่ ยังไม่เสร็จสิ้น 
+		}else{ // ยกรยณร• DEFAULF ยทร•รจ รร‘ยงรครรจร รรรงยจรร”รฉยน 
 			$cond = " AND trip.trip_status < '4' ";		
 		}
 
-		$inner_code=$inner_code?$inner_code:""; // Inner JOIN list  ON  trip.tripid =  list.tripid   พยายาม หลีกเลี่ยง การใช้ LEFT แล้ว
+		$inner_code=$inner_code?$inner_code:""; // Inner JOIN list  ON  trip.tripid =  list.tripid   ยพรร’รร’ร รร…ร•ยกร ร…ร•รจรยง ยกร’รรฃยชรฉ LEFT รกร…รฉร
 		if(($pri == '100' || $pri == '80') && $view == "all"){	
 		$str1 = "
 			select trip.tripid,trip.tripname,trip.note  ,trip.trip_status
@@ -732,15 +732,15 @@ var gFiles = 0;//add list school
 				<?
 
 				if ($rs["trip_status"] == "1" ){
-						echo "<img src=\"images/promo_red.png\" alt=\"อยู่ในระหว่างการป้อนรายการ\" width=\"24\" height=\"24\">";
+						echo "<img src=\"images/promo_red.png\" alt=\"รรรรจรฃยนรรรรรจร’ยงยกร’รยปรฉรยนรร’รยกร’ร\" width=\"24\" height=\"24\">";
 				}else if ($rs["trip_status"] == "4" ){
-						echo "<img src=\"images/promo_violet.png\" alt=\"สรุปค่าใช้จ่ายเสร็จสิ้น\" width=\"24\" height=\"24\">";
+						echo "<img src=\"images/promo_violet.png\" alt=\"รรรยปยครจร’รฃยชรฉยจรจร’รร รรรงยจรร”รฉยน\" width=\"24\" height=\"24\">";
 				}else if ($rs["trip_status"] == "3" ){
-						echo "<img src=\"images/promo_green.png\" alt=\"ผ่านการตรวจรับเอกสารรอการอนุมัติ\" width=\"24\" height=\"24\">";
+						echo "<img src=\"images/promo_green.png\" alt=\"ยผรจร’ยนยกร’รยตรรยจรร‘ยบร รยกรร’รรรยกร’รรยนรรร‘ยตร”\" width=\"24\" height=\"24\">";
 				}else if ($rs["trip_status"] == "2" ){
-						echo "<img src=\"images/promo_orange.png\" alt=\"บันทึกรายการค่าใช้จ่ายเสร็จสิ้น\" width=\"24\" height=\"24\">";
+						echo "<img src=\"images/promo_orange.png\" alt=\"ยบร‘ยนยทร–ยกรร’รยกร’รยครจร’รฃยชรฉยจรจร’รร รรรงยจรร”รฉยน\" width=\"24\" height=\"24\">";
 				}else{
-						echo "<img src=\"images/promo_red.png\" alt=\"อยู่ในระหว่างการป้อนรายการ\" width=\"24\" height=\"24\">";
+						echo "<img src=\"images/promo_red.png\" alt=\"รรรรจรฃยนรรรรรจร’ยงยกร’รยปรฉรยนรร’รยกร’ร\" width=\"24\" height=\"24\">";
 				}
 				?>
 				</td>
@@ -764,7 +764,7 @@ var gFiles = 0;//add list school
 			}
 			?>
                 <td height="25"  align="center"><nobr><p>
-                <a href="trip_detail.php?tripid=<?=$rs[tripid]?>"><img src="images/16x16/id_card.png" width="16" height="16" border="0" title="รายงานการเดินทางเพื่อออกปฏิบัติหน้าที่ในต่างจังหวัด" align="absmiddle"></a>&nbsp;&nbsp;
+                <a href="trip_detail.php?tripid=<?=$rs[tripid]?>"><img src="images/16x16/id_card.png" width="16" height="16" border="0" title="รร’รยงร’ยนยกร’รร ยดร”ยนยทร’ยงร ยพร—รจรรรยกยปยฏร”ยบร‘ยตร”รยนรฉร’ยทร•รจรฃยนยตรจร’ยงยจร‘ยงรรร‘ยด" align="absmiddle"></a>&nbsp;&nbsp;
                 <?php
                 $strCashHeader = "SELECT COUNT(tripid) AS count_trip
 									FROM  trip 
@@ -776,10 +776,10 @@ var gFiles = 0;//add list school
 
 							  ?>
                               <a href="report_cost_downline.php?tripid=<?=$rs[tripid]?>&userid=<?=$rs['userid']?>">
-                <img src="images/ico_register.gif" border="0" width="16" title="รายการค่าใช้จ่ายของลูกทีม" align="absmiddle"/></a>	&nbsp;&nbsp;
+                <img src="images/ico_register.gif" border="0" width="16" title="รร’รยกร’รยครจร’รฃยชรฉยจรจร’รยขรยงร…รยกยทร•ร" align="absmiddle"/></a>	&nbsp;&nbsp;
 				<?php } ?>	
                 <a href="?tripid=<?=$rs[tripid]?>&action=edit2"><img src="images/16x16/tools.png" width="16" height="16" border="0" title="Edit" align="absmiddle"></a> &nbsp;
-                <a href="upload.php?tripid=<?=$rs[tripid]?>"><img src="images/16x16/attachment.png" alt="จัดการไฟล์แนบ" width="16" height="16" border="0" align="absmiddle"></a>
+                <a href="upload.php?tripid=<?=$rs[tripid]?>"><img src="images/16x16/attachment.png" alt="ยจร‘ยดยกร’รรคยฟร…รฌรกยนยบ" width="16" height="16" border="0" align="absmiddle"></a>
 				<?
 				$sqlcheck = "
 				select tripid from list  where tripid='$rs[tripid]'
@@ -793,7 +793,7 @@ var gFiles = 0;//add list school
 				
 				if( intval($resultnum1) == '0' && $pri== "100"){
 				?>
-				<a href="#" onClick="if (confirm('คุณจะทำการลบข้อมูลในแถวนี้ใช่หรือไม่!!')) location.href='?action=delete&tripid=<?=$rs[tripid]?>';" >
+				<a href="#" onClick="if (confirm('ยครยณยจรยทร“ยกร’รร…ยบยขรฉรรรร…รฃยนรกยถรยนร•รฉรฃยชรจรรร—รรครรจ!!')) location.href='?action=delete&tripid=<?=$rs[tripid]?>';" >
 				<img src="images/16x16/delete.png" width="16" height="16" border="0" title="Delete"></a>
 				<? } ?>
 				</td>
@@ -808,7 +808,7 @@ var gFiles = 0;//add list school
 					
 				$result_unc = mysql_db_query($db_name,$sql_uncheck);  
 				$num_unc = mysql_num_rows($result_unc);
-				if($num_unc > 0 ){?><img src="images/16x16/lock.png" width="16" height="16" border="0" alt="ล้างค่าสถานะ" style="cursor:pointer" onClick="if(confirm('ต้องการปลดล๊อกจริงหรือไม่')==true){popWindow('clear_status.php?tripid=<?=$rs[tripid]?>&action=clear_value','450','200'); }"><? }?></td>
+				if($num_unc > 0 ){?><img src="images/16x16/lock.png" width="16" height="16" border="0" alt="ร…รฉร’ยงยครจร’รยถร’ยนร" style="cursor:pointer" onClick="if(confirm('ยตรฉรยงยกร’รยปร…ยดร…รชรยกยจรร”ยงรรร—รรครรจ')==true){popWindow('clear_status.php?tripid=<?=$rs[tripid]?>&action=clear_value','450','200'); }"><? }?></td>
 				<? } ?>
               </tr>
               <?
@@ -819,24 +819,24 @@ var gFiles = 0;//add list school
 		$arr_user = array();
 		while ($row_header = mysql_fetch_assoc($query_header)){	
 			$header_user_id = getUserTrip($row_header['header_trip']);
-			//User ที่เพิ่มที่หลัง นาย ธนพัฒน์
+			//User ยทร•รจร ยพร”รจรยทร•รจรร…ร‘ยง ยนร’ร ยธยนยพร‘ยฒยนรฌ
 			if($header_user_id >= 44){
 				$arr_user[] = $header_user_id;
 			}
 		}
 		
 		
-		#ให้แสดงรายการเฉพาะพี่จักร
+		#รฃรรฉรกรยดยงรร’รยกร’รร ยฉยพร’รยพร•รจยจร‘ยกร
 		
 		if($_SESSION['userid']==9){
 		$in_userid = implode("','",$arr_user);
 		/*
-			เพิ่ม
-			45 พีระเชษฐ์
-			81 นพรัตน์
-			89 ฉัตรชัย
-			91 เอกพงศ์
-			137 วชิรจักร
+			ร ยพร”รจร
+			45 ยพร•รรร ยชรยฐรฌ
+			81 ยนยพรร‘ยตยนรฌ
+			89 ยฉร‘ยตรยชร‘ร
+			91 ร รยกยพยงรรฌ
+			137 รยชร”รยจร‘ยกร
 			
 		*/
 		$str_staff = "		
@@ -858,15 +858,15 @@ var gFiles = 0;//add list school
                 <?
 
 				if ($rowstaff["trip_status"] == "1" ){
-						echo "<img src=\"images/promo_red.png\" alt=\"อยู่ในระหว่างการป้อนรายการ\" width=\"24\" height=\"24\">";
+						echo "<img src=\"images/promo_red.png\" alt=\"รรรรจรฃยนรรรรรจร’ยงยกร’รยปรฉรยนรร’รยกร’ร\" width=\"24\" height=\"24\">";
 				}else if ($rowstaff["trip_status"] == "4" ){
-						echo "<img src=\"images/promo_violet.png\" alt=\"สรุปค่าใช้จ่ายเสร็จสิ้น\" width=\"24\" height=\"24\">";
+						echo "<img src=\"images/promo_violet.png\" alt=\"รรรยปยครจร’รฃยชรฉยจรจร’รร รรรงยจรร”รฉยน\" width=\"24\" height=\"24\">";
 				}else if ($rowstaff["trip_status"] == "3" ){
-						echo "<img src=\"images/promo_green.png\" alt=\"ผ่านการตรวจรับเอกสารรอการอนุมัติ\" width=\"24\" height=\"24\">";
+						echo "<img src=\"images/promo_green.png\" alt=\"ยผรจร’ยนยกร’รยตรรยจรร‘ยบร รยกรร’รรรยกร’รรยนรรร‘ยตร”\" width=\"24\" height=\"24\">";
 				}else if ($rowstaff["trip_status"] == "2" ){
-						echo "<img src=\"images/promo_orange.png\" alt=\"บันทึกรายการค่าใช้จ่ายเสร็จสิ้น\" width=\"24\" height=\"24\">";
+						echo "<img src=\"images/promo_orange.png\" alt=\"ยบร‘ยนยทร–ยกรร’รยกร’รยครจร’รฃยชรฉยจรจร’รร รรรงยจรร”รฉยน\" width=\"24\" height=\"24\">";
 				}else{
-						echo "<img src=\"images/promo_red.png\" alt=\"อยู่ในระหว่างการป้อนรายการ\" width=\"24\" height=\"24\">";
+						echo "<img src=\"images/promo_red.png\" alt=\"รรรรจรฃยนรรรรรจร’ยงยกร’รยปรฉรยนรร’รยกร’ร\" width=\"24\" height=\"24\">";
 				}
 				?>
                 </td>
@@ -894,7 +894,7 @@ var gFiles = 0;//add list school
 
 							  ?>
                               <a href="report_cost_downline.php?tripid=<?=$rowstaff[tripid]?>&userid=<?=$rowstaff['userid']?>">
-                <img src="images/ico_register.gif" border="0" width="16" title="รายการค่าใช้จ่ายของลูกทีม" align="absmiddle"/></a>	&nbsp;&nbsp;
+                <img src="images/ico_register.gif" border="0" width="16" title="รร’รยกร’รยครจร’รฃยชรฉยจรจร’รยขรยงร…รยกยทร•ร" align="absmiddle"/></a>	&nbsp;&nbsp;
 				<?php } ?>	
                 </td>
             </TR>
@@ -955,7 +955,7 @@ if ($_GET[action]=="edit2"){
 
                   <td colspan=3 align="left" valign="top" bgcolor="#888888"><B class="gcaption">
 
-                    <?=($rs[tripid]!=0?"แก้ไข":"เพิ่ม")?>
+                    <?=($rs[tripid]!=0?"รกยกรฉรคยข":"ร ยพร”รจร")?>
 
                     Trip</B></td>
 
@@ -963,7 +963,7 @@ if ($_GET[action]=="edit2"){
 
                 <tr>
 
-                  <td align="right" valign="middle"><strong>รหัสTrip</strong></td>
+                  <td align="right" valign="middle"><strong>รรร‘รTrip</strong></td>
 
                   <td align="left" valign="top">
 
@@ -1014,7 +1014,7 @@ if ($_GET[action]=="edit2"){
 
                 <tr>
 
-                  <td align="right" valign="middle" width="20%"><strong>ชื่อTrip</strong></td>
+                  <td align="right" valign="middle" width="20%"><strong>ยชร—รจรTrip</strong></td>
 
                   <td align="left" valign="top" width="60%"><input name="tripname" type="text" class="input_text" id="tripname" value="<?=$rs[tripname]?>" size="50" <?=$disabled?> ></td>
 
@@ -1022,14 +1022,14 @@ if ($_GET[action]=="edit2"){
 
                 <tr>
 
-                  <td align="right" valign="top"><strong>หมายเหตุ</strong></td>
+                  <td align="right" valign="top"><strong>รรร’รร รยตร</strong></td>
 
                   <td align="left" valign="top"><textarea name="note" cols="70" rows="5" class="input_text" id="note" <?=$disabled?>><?=$rs[note]?></textarea></td>
 
                 </tr>
 
                 <tr>
-                  <td align="right" valign="top"><strong>ช่วงเวลา</strong></td>
+                  <td align="right" valign="top"><strong>ยชรจรยงร รร…ร’</strong></td>
                   <td align="left" valign="top">
 				    <?
 					  $strSQL =" SELECT * FROM `trip_schedule` WHERE (`trip_id`='$tripid') order by no_ref asc  ";
@@ -1051,9 +1051,9 @@ if ($_GET[action]=="edit2"){
 						 $strSQL =" SELECT * FROM `trip_schedule` WHERE (`trip_id`='$tripid') AND schedule_id <> $schedule_id  order by no_ref asc  ";
 						 $resultid_time  = mysql_db_query($db_name,$strSQL);
 						 while ($rs_time = mysql_fetch_assoc($resultid_time)){	
-							echo "<div><strong>ครั้งที่ $rs_time[no_ref]</strong> ตั้งแต่วันที่ ".swapdatedat($rs_time[start_date])."  ถึง ".swapdatedat($rs_time[end_date])." &nbsp;&nbsp;&nbsp;&nbsp; บันทึกเมื่อเวลา $rs_time[timestamp]</div>"; 
+							echo "<div><strong>ยครร‘รฉยงยทร•รจ $rs_time[no_ref]</strong> ยตร‘รฉยงรกยตรจรร‘ยนยทร•รจ ".swapdatedat($rs_time[start_date])."  ยถร–ยง ".swapdatedat($rs_time[end_date])." &nbsp;&nbsp;&nbsp;&nbsp; ยบร‘ยนยทร–ยกร รร—รจรร รร…ร’ $rs_time[timestamp]</div>"; 
 						 }
-						 echo "<strong><i>ครั้งล่าสุด</i></storng>";
+						 echo "<strong><i>ยครร‘รฉยงร…รจร’รรยด</i></storng>";
 					 }else{
 						 if(@mysql_num_rows($resultid_time)==0){
 							$add_news = "true";		 
@@ -1061,26 +1061,26 @@ if ($_GET[action]=="edit2"){
 					 }
 					 
 					 if(@mysql_num_rows($resultid_time)>0){
-						echo "<div id='late_date' style='display:none'><strong>ครั้งที่ $no_ref</strong> ตั้งแต่วันที่ $getdayA  ถึง $getdayB &nbsp;&nbsp;&nbsp;&nbsp; บันทึกเมื่อเวลา $time_ref</div>"; 	 
+						echo "<div id='late_date' style='display:none'><strong>ยครร‘รฉยงยทร•รจ $no_ref</strong> ยตร‘รฉยงรกยตรจรร‘ยนยทร•รจ $getdayA  ยถร–ยง $getdayB &nbsp;&nbsp;&nbsp;&nbsp; ยบร‘ยนยทร–ยกร รร—รจรร รร…ร’ $time_ref</div>"; 	 
 					 }					 
                       ?>
 
                   	  <input type="text" name="getdayA" id="getdayA" readonly value="<?=$getdayA?>">
-                  	  <input type='button' onClick="popUpCalendar(this, form1.getdayA, 'dd/mm/yyyy')" value=' เลือกวัน ' class='input' onFocus="header_trip();" <?=$disabled?>>
-                   		ถึง
+                  	  <input type='button' onClick="popUpCalendar(this, form1.getdayA, 'dd/mm/yyyy')" value=' ร ร…ร—รยกรร‘ยน ' class='input' onFocus="header_trip();" <?=$disabled?>>
+                   		ยถร–ยง
                       <input type="text" name="getdayB" id="getdayB" readonly value="<?=$getdayB?>" onFocus="header_trip();">
-               	    <input type='button' onClick="popUpCalendar(this, form1.getdayB, 'dd/mm/yyyy')" value=' เลือกวัน ' class='input' <?=$disabled?>>
+               	    <input type='button' onClick="popUpCalendar(this, form1.getdayB, 'dd/mm/yyyy')" value=' ร ร…ร—รยกรร‘ยน ' class='input' <?=$disabled?>>
 					  <? if ($_GET[action]=="edit2"){ ?>
                       <br />
                   	  <INPUT NAME="schedule_id" TYPE="hidden" id="schedule_id" VALUE="<?=$schedule_id?>">
                       <INPUT NAME="no_ref" TYPE="hidden" id="no_ref" VALUE="<?=$no_ref?>">
-                      <input name="trip_advance" id="trip_advance" type="checkbox" value="ON" <?=$add_news=="true"?"checked":""?> onClick="show_time('late_date')" <?=$disabled?>/> ระบุเป็นช่วงเวลาต่อเนื่องหรือเพิ่มเติม
+                      <input name="trip_advance" id="trip_advance" type="checkbox" value="ON" <?=$add_news=="true"?"checked":""?> onClick="show_time('late_date')" <?=$disabled?>/> รรยบรร ยปรงยนยชรจรยงร รร…ร’ยตรจรร ยนร—รจรยงรรร—รร ยพร”รจรร ยตร”ร
                       <? } ?>
                       </td>
                 </tr>
                 <tr>
-                	<td align="right"  valign="top"><strong>สถานะ</strong></td>
-                	<td align="left"><input type="checkbox" name="downline_status" id="downline_status" value="1" onClick="checkDownline();" <?php echo ($rs['downline_status']==1)?"checked":"";?> <?=$disabled?>>&nbsp;เป็นลูกทีม</td>
+                	<td align="right"  valign="top"><strong>รยถร’ยนร</strong></td>
+                	<td align="left"><input type="checkbox" name="downline_status" id="downline_status" value="1" onClick="checkDownline();" <?php echo ($rs['downline_status']==1)?"checked":"";?> <?=$disabled?>>&nbsp;ร ยปรงยนร…รยกยทร•ร</td>
                  </tr>
                  <?php
 				 $headeruser = getUserTrip($rs['header_trip']);
@@ -1090,8 +1090,8 @@ if ($_GET[action]=="edit2"){
 					 $rs_hu = mysql_fetch_assoc($query_headeru); 
                  ?>
                  <tr>
-                	<td align="right"  valign="top"><strong>หัวหน้าทีม</strong></td>
-                	<td align="left">คุณ<?=$rs_hu['name']."  ".$rs_hu['surname'];?></td>
+                	<td align="right"  valign="top"><strong>รร‘รรยนรฉร’ยทร•ร</strong></td>
+                	<td align="left">ยครยณ<?=$rs_hu['name']."  ".$rs_hu['surname'];?></td>
                  </tr>
                <?php
 				 }
@@ -1112,14 +1112,14 @@ if ($_GET[action]=="edit2"){
                ?>
                 
                 <tr>
-                	<td align="right"  valign="top"><strong>หัวหน้าเลือกลูกทีม</strong></td>
+                	<td align="right"  valign="top"><strong>รร‘รรยนรฉร’ร ร…ร—รยกร…รยกยทร•ร</strong></td>
                 	<td align="left">
                     <table>
                     	<tr>
                         <td>
                         <span id="div_headerid">
                         <select name="downlineid" id="downlineid" onChange="user_trip('downline_trip','sl_downline_trip',this.value);" <?=($rs['header_trip']>0 || $rs['downline_status']==1)?"disabled":"";?> >
-                        <option value="">เลือกลูกทีม</option>
+                        <option value="">ร ร…ร—รยกร…รยกยทร•ร</option>
                         <?php
 						$begin_date = $getdayA; 
 						$end_date = $getdayB;
@@ -1154,7 +1154,7 @@ if ($_GET[action]=="edit2"){
 										 
 						$query_userm  = mysql_db_query($db_name,$sql_userm);
 					 	while ($row_userm = mysql_fetch_assoc($query_userm)){	
-							echo '<option value="'.$row_userm['userid'].'" >คุณ'.$row_userm['name']."  ".$row_userm['surname'].'</option>';
+							echo '<option value="'.$row_userm['userid'].'" >ยครยณ'.$row_userm['name']."  ".$row_userm['surname'].'</option>';
 					 	}
                         ?>
                         </select>
@@ -1168,11 +1168,11 @@ if ($_GET[action]=="edit2"){
                         <td>
                         <span id="downline_trip">
                         	<select name="sl_downline_trip" id="sl_downline_trip" <?=($rs['header_trip']>0 || $rs['downline_status']==1)?"disabled":"";?>>
-							  <option value="">เลือกทิป</option>
+							  <option value="">ร ร…ร—รยกยทร”ยป</option>
                             </select>
                          </span>   
                          </td>
-                         <td><input type="button" name="b_add"  id="b_add" value=" เพิ่มลูกทีม " onClick="addList();" <?=($rs['header_trip']>0 || $rs['downline_status']==1)?"disabled":"";?>/></td>
+                         <td><input type="button" name="b_add"  id="b_add" value=" ร ยพร”รจรร…รยกยทร•ร " onClick="addList();" <?=($rs['header_trip']>0 || $rs['downline_status']==1)?"disabled":"";?>/></td>
                         </tr>
                     </table>
                     <ol id="files-root">
@@ -1184,7 +1184,7 @@ if ($_GET[action]=="edit2"){
 							 echo '<li id="file-'.$intFiles.'">';
 							 echo '<table cellpadding="1" cellspacing="1" ><tr>';
 							 echo '<td width="150" align="left">';
-							 echo "คุณ".$downline['name']."  ".$downline['surname'];
+							 echo "ยครยณ".$downline['name']."  ".$downline['surname'];
 							 echo '<input type="hidden" name="header_user[]" value="'.$downline['userid'].'"/>
                         			<input type="hidden" name="trip_user[]" value="'.$downline['tripid'].'"/>';
 							 echo '</td>';
@@ -1205,9 +1205,9 @@ if ($_GET[action]=="edit2"){
                 <tr/>
                 <tr>
                   <td align="right" valign="top" width="20%">&nbsp;</td>
-                  <td align="left" valign="top" width="60%"><input type="submit" name="Submit" value=" บันทึก "  <?=$disabled?>>
+                  <td align="left" valign="top" width="60%"><input type="submit" name="Submit" value=" ยบร‘ยนยทร–ยก "  <?=$disabled?>>
                       <input type="reset" name="Submit2" value="Reset" <?=$disabled?>>
-                      <input type="reset" name="Submit3" value="ยกเลิก" ONCLICK="<? if ($_GET[action] == "edit2") echo "location.href='?';"; else echo "window.close();"; ?>">
+                      <input type="reset" name="Submit3" value="รยกร ร…ร”ยก" ONCLICK="<? if ($_GET[action] == "edit2") echo "location.href='?';"; else echo "window.close();"; ?>">
                     
                     </td>
 
@@ -1216,9 +1216,9 @@ if ($_GET[action]=="edit2"){
               </table>
 			<table  style="margin-left:150px;">
             <tr><td>
-            <strong>หมายเหตุ</strong>
+            <strong>รรร’รร รยตร</strong>
             <br/>
-            ลูกทีมคือ บุคคลที่ไม่สามารถเบิกค่าใช่จ่ายได้ด้วยตัวเอง  โดยหัวหน้าทีมจะทำการเลือกลูกทีมที่อยู่ในความดูแลของตัวเอง
+            ร…รยกยทร•รยคร—ร ยบรยคยคร…ยทร•รจรครรจรร’รร’รยถร ยบร”ยกยครจร’รฃยชรจยจรจร’รรคยดรฉยดรฉรรยตร‘รร รยง  รขยดรรร‘รรยนรฉร’ยทร•รยจรยทร“ยกร’รร ร…ร—รยกร…รยกยทร•รยทร•รจรรรรจรฃยนยครร’รยดรรกร…ยขรยงยตร‘รร รยง
             <p/>&nbsp;
             </td></tr>
             </table>
