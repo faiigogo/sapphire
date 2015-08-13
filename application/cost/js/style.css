@@ -1,0 +1,210 @@
+BODY {
+	FONT-SIZE: 12px; MARGIN: 0px
+}
+A:link {
+	FONT-SIZE: 12px; COLOR: #000000; FONT-FAMILY: Tahoma,  "Microsoft Sans Serif"; TEXT-DECORATION: underline
+}
+A:visited {
+	FONT-SIZE: 12px; COLOR: #000000; FONT-FAMILY: Tahoma,  "Microsoft Sans Serif"; TEXT-DECORATION: underline
+}
+A:active {
+	FONT-SIZE: 12px; COLOR: #014d5f; FONT-FAMILY: Tahoma,  "Microsoft Sans Serif"; TEXT-DECORATION: underline
+}
+A:hover {
+	FONT-SIZE: 12px; COLOR: #f3960b; FONT-FAMILY: Tahoma,  "Microsoft Sans Serif"; TEXT-DECORATION: underline
+}
+PRE {
+	FONT-SIZE: 12px
+}
+FONT {
+	FONT-SIZE: 12px; FONT-FAMILY: Tahoma,  "Microsoft Sans Serif"
+}
+FONT.med {
+	FONT-SIZE: 12px; FONT-FAMILY: Tahoma,  "Microsoft Sans Serif"
+}
+FONT.index {
+	FONT-SIZE: 12px; FONT-FAMILY: Tahoma,  "Microsoft Sans Serif"
+}
+FONT.small {
+	FONT-SIZE: 10px; FONT-FAMILY: arial
+}
+FONT.big {
+	FONT-WEIGHT: bold; FONT-SIZE: 14px; COLOR: #000000; FONT-FAMILY: Tahoma,  "Microsoft Sans Serif"
+}
+FONT.big2 {
+	FONT-WEIGHT: bold; FONT-SIZE: 14px; COLOR: #000000; FONT-FAMILY: Tahoma,  "Microsoft Sans Serif"
+}
+FONT.red {
+	FONT-WEIGHT: bold; FONT-SIZE: 12px; COLOR: #ff0000; FONT-FAMILY: Tahoma,  "Microsoft Sans Serif"
+}
+FONT.bigred {
+	FONT-WEIGHT: bold; FONT-SIZE: 12px; COLOR: #ff0000; FONT-FAMILY: Tahoma,  "Microsoft Sans Serif"
+}
+FONT.white {
+	FONT-SIZE: 12px; COLOR: #ffffff; FONT-FAMILY: Tahoma,  "Microsoft Sans Serif"
+}
+FORM {
+	FONT-SIZE: 12px; FONT-FAMILY: Tahoma,  "Microsoft Sans Serif"
+}
+TABLE {
+	FONT-SIZE: 12px; FONT-FAMILY: Tahoma,  "Microsoft Sans Serif"
+}
+TR {
+	FONT-SIZE: 12px; FONT-FAMILY: Tahoma,  "Microsoft Sans Serif"
+}
+TD {
+	FONT-SIZE: 12px; FONT-FAMILY: Tahoma,  "Microsoft Sans Serif"
+}
+U {
+	FONT-SIZE: 12px; FONT-FAMILY: Tahoma,  "Microsoft Sans Serif"
+}
+B {
+	FONT-SIZE: 12px; FONT-FAMILY: Tahoma,  "Microsoft Sans Serif"
+}
+STRONG {
+	FONT-SIZE: 12px; FONT-FAMILY: Tahoma,  "Microsoft Sans Serif"
+}
+.bodyblack {
+	FONT-SIZE: 12px; FONT-FAMILY: Tahoma,  "Microsoft Sans Serif"
+}
+.index1 {
+	FONT-SIZE: 12px; FONT-FAMILY: Tahoma,  "Microsoft Sans Serif"; BACKGROUND-COLOR: #b7cbcf
+}
+.index2 {
+	FONT-SIZE: 12px; FONT-FAMILY: Tahoma,  "Microsoft Sans Serif"; BACKGROUND-COLOR: #e6e6e6
+}
+.indexbold {
+	FONT-WEIGHT: bold; FONT-SIZE: 11px; FONT-FAMILY: Tahoma,  "Microsoft Sans Serif"
+}
+.header {
+	FONT-WEIGHT: bold; FONT-SIZE: 12px; FONT-STYLE: normal; FONT-FAMILY: Tahoma,  "Microsoft Sans Serif"; TEXT-ALIGN: center; TEXT-DECORATION: none
+}
+.bodyblue {
+	FONT-SIZE: 12px; COLOR: #003399; FONT-FAMILY: Tahoma,  "Microsoft Sans Serif"
+}
+.bodyblackTB {
+	PADDING-RIGHT: 11px; PADDING-LEFT: 11px; FONT-SIZE: 12px; FONT-FAMILY: Tahoma,  "Microsoft Sans Serif"
+}
+.bodyblueTB {
+	FONT-SIZE: 12px; COLOR: #003399; FONT-FAMILY: Tahoma,  "Microsoft Sans Serif"
+}
+.headerTB {
+	PADDING-RIGHT: 5px; PADDING-LEFT: 5px; FONT-WEIGHT: bold; FONT-SIZE: 14px; FONT-STYLE: normal; FONT-FAMILY: Tahoma,  "Microsoft Sans Serif"; TEXT-DECORATION: none
+}
+.headerTB_white {
+	PADDING-RIGHT: 5px; PADDING-LEFT: 5px; FONT-WEIGHT: bold; FONT-SIZE: 14px; COLOR: #ffffff; FONT-STYLE: normal; FONT-FAMILY: Tahoma,  "Microsoft Sans Serif"; TEXT-DECORATION: none
+}
+.link_back {
+	FONT-WEIGHT: bold; FONT-SIZE: 12px; COLOR: #000000; TEXT-DECORATION: none
+}
+.executive_bg {
+	FONT-WEIGHT: bold; FONT-SIZE: 12px; BACKGROUND-COLOR: #efefef
+}
+.redlink {
+	FONT-WEIGHT: bold; FONT-SIZE: 12px; COLOR: #ff0000
+}
+.redlink:link {
+	FONT-SIZE: 12px; COLOR: #ff0000
+}
+.redlink:visited {
+	FONT-SIZE: 12px; COLOR: #ff0000
+}
+.redlink:hover {
+	FONT-SIZE: 12px; COLOR: #000000
+}
+.menu_java {
+	FONT-SIZE: 12px; COLOR: #333333; TEXT-DECORATION: none
+}
+.menu_java:link {
+	FONT-SIZE: 12px; COLOR: #333333; TEXT-DECORATION: none
+}
+.menu_java:visited {
+	FONT-SIZE: 12px; COLOR: #333333; TEXT-DECORATION: none
+}
+.menu_java:hover {
+	FONT-SIZE: 12px; COLOR: #f3960b
+}
+.txtwhite {
+	FONT-SIZE: 14px; COLOR: #ffffff
+}
+.13_bold {
+	FONT-WEIGHT: bold; FONT-SIZE: 13px; COLOR: #000000; TEXT-DECORATION: none
+}
+.13_style {
+	FONT-SIZE: 13px; COLOR: #000000; TEXT-DECORATION: none
+}
+.13_W {
+	FONT-WEIGHT: bold; FONT-SIZE: 13px; COLOR: #ffffff; TEXT-DECORATION: none
+}
+.plink {
+	PADDING-RIGHT: 5px; PADDING-LEFT: 5px; FONT-WEIGHT: bold; FONT-SIZE: 12px; COLOR: #ffffff
+}
+.plink:link {
+	FONT-WEIGHT: bold; FONT-SIZE: 12px; COLOR: #ffffff; TEXT-DECORATION: none
+}
+.plink:hover {
+	FONT-WEIGHT: bold; FONT-SIZE: 12px; COLOR: #ffffff; TEXT-DECORATION: underline
+}
+.plink:visited {
+	FONT-WEIGHT: bold; FONT-SIZE: 12px; COLOR: #ffffff; TEXT-DECORATION: none
+}
+.plink:active {
+	FONT-WEIGHT: bold; FONT-SIZE: 12px; COLOR: #ffffff; TEXT-DECORATION: none
+}
+.ptext_w {
+	FONT-SIZE: 12px; COLOR: #ffffff; TEXT-DECORATION: none
+}
+.epm_button {
+	BORDER-RIGHT: #cccccc 1px solid; PADDING-RIGHT: 4px; BORDER-TOP: #cccccc 1px solid; PADDING-LEFT: 4px; FONT-WEIGHT: bold; FONT-SIZE: 11px; BACKGROUND: #e9ecef; PADDING-BOTTOM: 4px; BORDER-LEFT: #cccccc 1px solid; CURSOR: hand; COLOR: #666666; PADDING-TOP: 4px; BORDER-BOTTOM: #cccccc 1px solid
+}
+.epm_inputbox {
+	BORDER-RIGHT: #cccccc 1px solid; BORDER-TOP: #cccccc 1px solid; MARGIN: 0px; BORDER-LEFT: #cccccc 1px solid; BORDER-BOTTOM: #cccccc 1px solid
+}
+.login_right_exsum_blue {
+	COLOR: #273f6f; FONT-FAMILY: Tahoma
+}
+INPUT {
+	FONT-SIZE: 12px; FONT-FAMILY: "MS Sans Serif"
+}
+.fillcolor {
+	PADDING-RIGHT: 0pt; PADDING-LEFT: 0pt; FILTER: progid:DXImageTransform.Microsoft.Gradient(GradientType=1, StartColorStr='#273F6F', EndColorStr='#ffffff'); PADDING-BOTTOM: 0pt; VERTICAL-ALIGN: top; PADDING-TOP: 0pt; BACKGROUND-COLOR: #273f6f
+}
+.table_head_text {
+	PADDING-LEFT: 5px; FONT-WEIGHT: bold; COLOR: #70748a; BORDER-BOTTOM: #000000 1px solid; FONT-FAMILY: Tahoma
+}
+.table_data_text {
+	PADDING-RIGHT: 5px; PADDING-LEFT: 5px; PADDING-BOTTOM: 5px; VERTICAL-ALIGN: top; PADDING-TOP: 5px; BORDER-BOTTOM: #666666 1px solid; FONT-FAMILY: Tahoma
+}
+.table_data_no_u {
+	PADDING-RIGHT: 5px; PADDING-LEFT: 5px; PADDING-BOTTOM: 5px; VERTICAL-ALIGN: top; PADDING-TOP: 5px; FONT-FAMILY: Tahoma
+}
+.table_data_img {
+	PADDING-RIGHT: 5px; PADDING-LEFT: 5px; PADDING-BOTTOM: 5px; VERTICAL-ALIGN: top; PADDING-TOP: 5px; BORDER-BOTTOM: #666666 1px solid; FONT-FAMILY: Tahoma
+}
+.fillcolor_menu {
+	PADDING-RIGHT: 0pt; PADDING-LEFT: 0pt; FILTER: progid:DXImageTransform.Microsoft.Gradient(GradientType=1, StartColorStr='#5C85EF', EndColorStr='#90B6FF'); PADDING-BOTTOM: 0pt; MARGIN: 2px; PADDING-TOP: 0pt; BACKGROUND-COLOR: #5c85ef
+}
+A.ppp:link {
+	PADDING-RIGHT: 0px; DISPLAY: block; PADDING-LEFT: 15px; PADDING-BOTTOM: 0px; VERTICAL-ALIGN: middle; WIDTH: 100%; COLOR: #000000; PADDING-TOP: 3px; FONT-FAMILY: Tahoma,  "Microsoft Sans Serif"; HEIGHT: 25px; TEXT-DECORATION: none
+}
+A.ppp:visited {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 15px; PADDING-BOTTOM: 0px; VERTICAL-ALIGN: middle; COLOR: #000000; PADDING-TOP: 3px; FONT-FAMILY: Tahoma,  "Microsoft Sans Serif"; HEIGHT: 25px; TEXT-DECORATION: none
+}
+A.ppp:hover {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 15px; PADDING-BOTTOM: 0px; VERTICAL-ALIGN: middle; COLOR: #df9300; PADDING-TOP: 3px; FONT-FAMILY: Tahoma,  "Microsoft Sans Serif"; TEXT-DECORATION: none
+}
+A.ppp:active {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 15px; PADDING-BOTTOM: 0px; VERTICAL-ALIGN: middle; COLOR: #000000; PADDING-TOP: 3px; FONT-FAMILY: Tahoma,  "Microsoft Sans Serif"; TEXT-DECORATION: none
+}
+#active_menu {
+	DISPLAY: block; FONT-WEIGHT: bold; BACKGROUND-IMAGE: url(../application/epm/images/bg_manu.gif); WIDTH: 100%; COLOR: #333333
+}
+.project_input {
+	PADDING-RIGHT: 5px; PADDING-LEFT: 5px; PADDING-BOTTOM: 5px; PADDING-TOP: 5px
+}
+.fillcolor_loginleft {
+	PADDING-RIGHT: 0pt; PADDING-LEFT: 0pt; FILTER: progid:DXImageTransform.Microsoft.Gradient(GradientType=0, StartColorStr='#ffffff', EndColorStr='#197FC9'); PADDING-BOTTOM: 0pt; VERTICAL-ALIGN: top; PADDING-TOP: 0pt; BACKGROUND-COLOR: #ffffff
+}
+.fillcolor_loginleft2 {
+	PADDING-RIGHT: 0pt; PADDING-LEFT: 0pt; FILTER: progid:DXImageTransform.Microsoft.Gradient(GradientType=0, StartColorStr='#197FC9', EndColorStr='#0C5FB5'); PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; BACKGROUND-COLOR: #197fc9
+}

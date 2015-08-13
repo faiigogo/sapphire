@@ -1,0 +1,21 @@
+@charset "utf-8";
+body			{ background:#3B4D61 url(bg.jpg) repeat 0 0; }
+h1				{ font:bold 40px Tahoma, Helvetica, Arial, Sans-Serif; text-align:center; color:#1F2F3F; text-shadow:0px 2px 2px #74818F; }
+h2, a#home		{ display:block; font:bold 15px/10px Tahoma, Helvetica, Arial, Sans-Serif; text-align:center; }
+h2				{ color:#D1D8DF; }
+a#home			{ text-decoration:none; font-size:11px; font-weight:300; padding-bottom:14px; color:#6F777F; z-index:999; }
+a#home:hover	{ color:#BFDEFF; }
+
+#followmebubble	{ display:none; position:absolute; bottom:50px; right:80px; padding:3px 10px; color:#D1D8DF; background:rgba(0,0,0,0.5); text-align:center; -moz-border-radius:5px; -webkit-border-radius:5px; font:bold 10px/12px Tahoma, Helvetica, Arial, Sans-Serif; }
+#followme		{ position:absolute; bottom:20px; right:30px; width:50px; height:50px; }
+#followme img	{ border:0; }
+#retweet		{ position:absolute; bottom:20px; right:100px; height:15px; padding:2px 12px; color:#fff; background:#95cd3c; text-decoration:none; border:2px solid #80b62a; font:bold 15px/13px Tahoma, Helvetica, Arial, Sans-Serif; text-align:center; -moz-border-radius:5px; -webkit-border-radius:5px; box-shadow: 2px 2px 5px #000; -moz-box-shadow: 2px 2px 5px #000; -webkit-box-shadow: 2px 2px 5px #000; }
+#retweet:hover	{ color:#80b62a; background:#fff; }
+#infobox		{ position:absolute; width:300px; bottom:20px; left:50%; margin-left:-150px; padding:0 20px; background:rgba(0,0,0,0.5); -moz-border-radius:15px; -webkit-border-radius:15px; z-index:999; }
+
+#switch			{ position:absolute; width:80px; height:120px; bottom:50px; left:50px; background:url(light-switch.png) no-repeat -80px 0; cursor:pointer; z-index:100; }
+#light-bulb		{ position:absolute; width:150px; height:150px; top:20%; left:70%; background:url(lightbulb.png) no-repeat -150px 0; cursor:move; z-index:800; }
+#light-bulb2	{ width:150px; height:150px; background:url(lightbulb.png) no-repeat 0 0; cursor:move;}
+#logo			{ position:absolute; width:450px; height:150px; top:40%; left: 30%; background:url(logo.png) no-repeat 0 0; cursor:move; z-index:700; }
+#logosh			{ position:absolute; width:450px;
+

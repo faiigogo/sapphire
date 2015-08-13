@@ -1,0 +1,295 @@
+@CHARSET "UTF-8";
+/******* GENERAL RESET *******/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em,
+font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody,
+ tfoot, thead, tr, th, td {
+border:0pt none;
+font-family:inherit;
+font-size: 100%;
+font-style:inherit;
+font-weight:inherit;
+margin:0pt;
+padding:0pt;
+vertical-align:baseline;
+}
+body{
+	
+	line-height:14px;
+	font-size: 11px;
+	font-family: Tahoma, Arial,  Verdana, Helvetica, sans-serif;
+	margin:0pt;
+	overflow: hidden;
+	cursor: default !Important;
+}
+html,body{
+	height:100%;
+}
+.clear{
+	clear: both;
+	height: 0;
+	visibility: hidden;
+	display: block;
+}
+a{
+	text-decoration: none;
+	color:#FFF;
+}
+/******* GENERAL RESET *******/
+/******* MAIN *******/
+#main{
+	height: 100%;
+	/*background: transparent url(images/cillout_bg.jpg) no-repeat scroll center center;*/
+	overflow: none;
+}
+/******* /MAIN  *******/
+/******* ICONS *******/
+#main div.icon{
+	min-width: 48px;
+	min-height: 48px;
+	padding: 0px 14px 8px;
+	border: 1px solid transparent;
+	margin: 0pt auto;
+	text-align: left;
+	position: absolute;
+	display: none;
+}
+#main div.icon:hover{
+	background-color: rgba(255, 255, 255, 0.5) !Important;
+	border: 1px solid #fff;
+	-moz-border-radius: 3px;
+    -khtml-border-radius: 3px;
+    -webkit-border-radius: 3px;
+
+}
+#main div.icon.active{
+	background-color: #0a2c5e !Important;
+	border: 1px solid #3b567e;
+}
+#main div.icon div.name{
+	margin-top: 52px;
+	text-align: center;
+	color: #fff;
+}
+
+/*#main #mycomputer{
+	background: transparent url(images/computer.png) no-repeat scroll center 4px;
+	top: 32px;
+	left: 32px;
+}*/
+
+#main #home{
+	background: transparent url(images/start.png) no-repeat scroll center 4px;
+	top: 32px;
+	left: 32px;
+	
+}
+#main #article{
+	background: transparent url(images/book.png) no-repeat scroll center 4px;
+	top: 32px;
+	left: 120px;
+}
+#main #rss{
+	background: transparent url(images/rss.png) no-repeat scroll center 4px;
+	top: 128px;
+	left: 32px;
+}
+#main #board{
+	background: transparent url(images/chalk_board.png) no-repeat scroll center 4px;
+	top: 128px;
+	left: 120px;
+}
+#main #showcase{
+	background: transparent url(images/folder.png) no-repeat scroll center 4px;
+	top: 224px;
+	left: 32px;
+}
+
+#main #picture{
+	background: transparent url(images/Leicai_alt3_128x128.png) no-repeat scroll center 4px;
+	top: 320px;
+	left: 32px;
+}
+#main #logout{
+	background: transparent url(images/green_button.png) no-repeat scroll center 4px;
+	top: 224px;
+	left: 120px;
+}
+#main #logout:hover{
+	background: transparent url(images/red_button.png) no-repeat scroll center 4px;
+	top: 224px;
+	left: 120px;
+	background-color: rgba(255, 0, 0, 0.5) !Important;
+	border: 1px solid #fff;
+	-moz-border-radius: 3px;
+    -khtml-border-radius: 3px;
+    -webkit-border-radius: 3px;
+}
+#main #trade {
+	background: transparent url(images/rss2_128.png) no-repeat scroll center 4px;
+	top: 224px;
+	left: 120px;
+}
+#main #trash{
+	background: transparent url(images/trash.png) no-repeat scroll center 4px;
+}
+/******* /ICONS  *******/
+
+/******* TASKBAR  *******/
+#main #taskbar{
+	width: 100%;
+	height: 48px;
+	line-height: 42px;
+	background-color: #FBFEF3 !Important;
+	border: 1px solid #f0f0f0;
+	position: absolute;
+	left: 0;
+	bottom: 0px;
+	padding: 4px 0px 1px 0px;
+	display: none;
+}
+#main #taskbar #start{
+	float: left;
+	background: transparent url(images/start.png) no-repeat 4px -3px;
+	width: 64px;
+	margin: 0 4px 0 0;
+	padding: 0 2px 0 42px;
+	font-size: 18px;
+	font-style: normal;
+	font-weight: 700;
+	text-align: center;
+	color:#2E2520;
+}
+#main #taskbar #start:hover{
+	background-color: #FBFEF3;
+}
+#main #taskbar #start a{
+	color:#2E2520;
+}
+	
+#main #taskbar #clock{
+	float: right;
+	/*background:url(images/clock.png) no-repeat 4px center;*/
+	padding: 0 8px 0 50px;
+	font-size: 12px;
+	
+	font-weight: 700;
+	text-align: center;
+	color:#2E2520;
+}
+#main #taskbar #support_ie{
+	float:left;	
+	padding: 0 8px 0 50px;
+	font-size: 12px;	
+	font-weight: 700;
+	text-align: center;
+	color:#2E2520;
+}
+/******* /TASKBAR  *******/
+#main #data{
+	padding-top:40px;
+	width:800px;
+	color:#fff;
+	font-size:14;
+	margin-left:240px;
+}
+ .login {
+	 -moz-border-radius: 3px;
+-khtml-border-radius: 3px;
+-webkit-border-radius: 3px;
+margin:auto;
+margin-top:10px;
+	 
+	 height:450px;
+	 background:url(../logo.jpg) no-repeat center;
+
+ }
+input.txt {
+  color: #999;
+  
+  border: 1px solid #FFF;
+  width: 150px;
+}
+input.btnlogin {
+	margin-top:10px;
+	
+ 	width:100px;
+	height:40px;
+	 -moz-border-radius: 3px;
+-khtml-border-radius: 3px;
+-webkit-border-radius: 3px;
+  color: #666;
+  background-color: #CCC;
+  border: 1px solid #999;
+}
+form div {
+  clear: left;
+  margin: 0;
+  padding: 0;
+  padding-top: 5px;
+}
+form div label {
+	float: left;
+	width: 20%;
+	font: bold 0.9em Arial, Helvetica, sans-serif;
+}
+fieldset {
+
+  margin-top: 20px;
+  padding:6.5em;
+  padding-left:10em;
+}
+legend {
+  font: bold 0.8em Arial, Helvetica, sans-serif;
+  color: #00008B;
+  background-color: #FFFFFF;
+}
+input.btnlogin:hover {
+	background: #9C0;
+	color:#FFF;
+}
+input.cancel {
+	margin-top:10px;
+	
+ 	width:100px;
+	height:40px;
+	 -moz-border-radius: 3px;
+-khtml-border-radius: 3px;
+-webkit-border-radius: 3px;
+  color: #666;
+  background-color: #ccc;
+  border: 1px solid #999;
+}
+input.cancel:hover {
+	background: #F30;
+		color:#FFF;
+}
+.messagebox{
+	position:absolute;
+	width:200px;
+	margin-left:5px;
+	margin-top:5px;
+	border:1px solid #c93;
+	background:#ffc;
+	padding:3px;
+}
+.messageboxok{
+	position:absolute;
+	width:auto;
+	margin-left:10px;
+	border:1px solid #349534;
+	background:#C9FFCA;
+	padding:3px;
+	font-weight:bold;
+	color:#008000;
+	
+}
+.messageboxerror{
+	position:absolute;
+	width:auto;
+	margin-left:10px;
+	border:1px solid #CC0000;
+	background:#F7CBCA;
+	padding:3px;
+	font-weight:bold;
+	color:#CC0000;
+}

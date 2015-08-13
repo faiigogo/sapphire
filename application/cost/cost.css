@@ -1,0 +1,106 @@
+body {  margin: 0px  0px; padding: 0px  0px}
+
+body,table,td,form,select,input,textarea{
+	font-family: Tahoma, "MS Sans Serif";
+	font-size: 12px;
+}
+
+a {
+	color: #990000;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #CC0000;
+	font-weight: bold;
+	text-decoration: underline;
+}
+
+.menuitem {font-family: Tahoma, "MS Sans Serif"; font-size:14pt; font-weight: bold;}
+.xbutton {font-size: 8pt; font-weight: bold;}
+.caption {color: #442ACC;}
+.gcaption {font-weight: bold; color: #000000; font-size: 13;}
+.input_text{
+	border-color:#000000;
+	border-width: 1px;
+}
+.textp{
+	color:#716F6F;
+}
+.pheader{
+	font-size:16px;
+	font-weight:bold;
+	color:#FFFFFF;
+}
+.bgbutton {
+	color: #FFFFFF;
+	background-color: #CCCCCC;
+	border:thin;
+	border-color:#000000;
+	font-size: 8pt; 
+	font-weight: bold;
+}
+.mainlink {
+	PADDING-RIGHT: 8px; PADDING-LEFT: 8px; PADDING-BOTTOM: 0px; PADDING-TOP: 0px
+}
+.plink {
+	COLOR: #ffffff
+}
+.plink :link {
+	COLOR: #ffffff
+}
+.plink:hover {
+	COLOR: #ffffff;
+}
+.plink :visited {
+	COLOR: #ffffff
+}
+.ptextmain {
+	COLOR: #ffffff
+}
+.bluebotton {
+	background:#25037C; 
+	color:#FFF; 
+	font-weight:bold; 
+	border:none;
+}
+
+.style2 {
+	color: #000000;
+	font-weight: bold;
+}
+.style4 {
+	color: #FFFFFF;
+	font-weight: bold;
+}
+.style5 {
+	color: #1B0162;
+	font-weight: bold;
+	font-size:14px;
+}
+
+table.sample {
+	border-width: 0px;
+	border-spacing: 2px;
+	border-style: hidden;
+	border-color: gray;
+	border-collapse: separate;
+	background-color: white;
+}
+table.sample th {
+	border-width: 0px;
+	padding: 0px;
+	border-style: hidden;
+	border-color: gray;
+	background-color: rgb(27, 1, 98);
+	-moz-border-radius: 9px 9px 9px 9px;
+}
+table.sample td {
+	border-width: 0px;
+	padding: 0px;
+	border-style: hidden;
+	border-color: gray;
+	background-color: rgb(27, 1, 98);
+	-moz-border-radius: 9px 9px 9px 9px;
+}

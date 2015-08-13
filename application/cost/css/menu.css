@@ -1,0 +1,31 @@
+@charset "utf-8";
+ul.v_menu{ /* กำหนดขอบเขตของเมนู */  
+    list-style:none;   
+    margin:0px;   
+    padding:0px;   
+    width:180px;   
+    font-family:tahoma, "Microsoft Sans Serif", Vanessa;   
+    font-size:12px;   
+	display:none;
+}   
+ul.v_menu > li{ /* กำหนดรูปแบบให้กับเมนูเ */  
+    display:block;   
+    height:20px;   
+    text-indent:5px;   
+    background-color:#000000;   
+    border:1px #999999 groove;   
+}   
+ul.v_menu > li:hover{ /* กำหนดรูปแบบให้กับเมนูเมื่อมีเมาส์อยู่เหนือ */  
+    display:block;   
+    height:20px;   
+    text-indent:5px;   
+    background-color:#9AC305;   
+    border:1px #999999 groove;   
+}   
+ul.v_menu > li > a{ /* กำหนดรูปแบบให้กับลิ้งค์ */  
+    text-decoration:none;   
+    color:#FFFFFF;   
+	font-weight:bold;
+    line-height:20px;   
+}   
+
