@@ -502,7 +502,7 @@ var gFiles = 0;//add list school
             </table>  
             <table width="100%" border="0" align="center" cellpadding="1" cellspacing="1">
               <tr>
-                <td  align="left" style="background-color:#FFFFFF; display:<?=(($pri =='100' || $pri =='80')?"":"none")?>; "><nobr><a href="addtrip.php<?=$view != "all" ? "?view=all" : "?view=owner"?>"><img src="images/16x16/monitor.png" width="16" height="16" border="0">ÃÒÂ§Ò¹<?=$view != "all" ? "·Ñé§ËÁ´·Ø¡¤¹" : "ÊèÇ¹ºØ¤¤Å"?></a></td>
+                <td  align="left" style="background-color:#FFFFFF; display:<?=(($pri =='100' || $pri =='80')?"":"none")?>; "><nobr><a href="addtrip.php<?=$view != "all" ? "?view=all" : "?view=owner"?>"><img src="images/16x16/monitor.png" width="16" height="16" border="0">รายงาน<?=$view != "all" ทั้งหมดทุกคน"ส่วนบุคคล"?></a></td>/td>
                 <td  align="left" style="background-color:#FFFFFF"><nobr><a href="listallproject.php"><img src="images/16x16/monitor.png" width="16" height="16" border="0">ÃÒÂ§Ò¹¨Óá¹¡â¤Ã§¡ÒÃ·Ñé§ËÁ´</a></td>
                 <td  align="left" style="background-color:#FFFFFF"><nobr><a href="costByProject.php"><img src="images/16x16/monitor.png" width="16" height="16" border="0">ÃÒÂ§Ò¹¤èÒãªé¨èÒÂµÒÁËÁÇ´µé¹·Ø¹</a></td>
                 <td  align="left" style="background-color:#FFFFFF"><nobr><a href="listalltypecost.php"><img src="images/16x16/monitor.png" width="16" height="16" border="0">ÃÒÂ§Ò¹ËÁÇ´¤èÒãªé¨èÒÂ</a></td>
