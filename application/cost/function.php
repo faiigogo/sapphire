@@ -89,21 +89,21 @@ function swapdate($temp){
 	return $ndate;
 }
 
-//function ������ʴ��ѹ���Ẻ��� ��� edocument
+//function ·ÕèãªéáÊ´§ÇÑ¹·ÕèáººàµçÁ ãªéã¹ edocument
 function daythai($temp){
 if($temp != "0000-00-00"){
 
-	$month 	= array("���Ҥ�", "����Ҿѹ��", "�չҤ�", "����¹", "����Ҥ�", "�Զع�¹", "�á�Ҥ�", "�ԧ�Ҥ�", "�ѹ��¹", "���Ҥ�", "��Ȩԡ�¹", "�ѹ�Ҥ�"); 
+	$month 	= array("Á¡ÃÒ¤Á", "¡ØÁÀÒ¾Ñ¹¸ì", "ÁÕ¹Ò¤Á", "àÁÉÒÂ¹", "¾ÄÉÀÒ¤Á", "ÁÔ¶Ø¹ÒÂ¹", "¡Ã¡®Ò¤Á", "ÊÔ§ËÒ¤Á", "¡Ñ¹ÂÒÂ¹", "µØÅÒ¤Á", "¾ÄÈ¨Ô¡ÒÂ¹", "¸Ñ¹ÇÒ¤Á"); 
 	$num 	= explode("-", $temp);			
 	if($num[0] == "0000"){
-	  $date 	= "����к�";
+	  $date 	= "äÁèÃÐºØ";
 	} else {
 	  $tyear = $num[0] +  543;
 	  $date 	= remove_zero($num[2])."&nbsp;".$month[$num[1] - 1 ]."&nbsp;".$tyear;	
 	}
 
 } else {
-	$date = "����к�";
+	$date = "äÁèÃÐºØ";
 }	
 	return $date;
 }
@@ -111,31 +111,31 @@ if($temp != "0000-00-00"){
 function shortday($temp){
 if($temp != "0000-00-00"){
 
-	$month 	= array("�.�.", "�.�.", "��.�.", "�.�.", "�.�.", "��.�.", "�.�.", "�.�.", "�.�.", "�.�.", "�.�.", "�.�."); 
+	$month 	= array("Á.¤.", "¡.¾.", "ÁÕ.¤.", "Á.Â.", "¾.¤.", "ÁÔ.Â.", "¡.¤.", "Ê.¤.", "¡.Â.", "µ.¤.", "¾.Â.", "¸.¤."); 
 	$num 	= explode("-", $temp);			
 	if($num[0] == "0000"){
-	  $date 	= "����к�";
+	  $date 	= "äÁèÃÐºØ";
 	} else {
 	  $tyear = $num[0] +  543;
 	  $date 	= remove_zero($num[2])."&nbsp;".$month[$num[1] - 1 ]."&nbsp;".$tyear;	
 	}
 
 } else {
-	$date = "����к�";
+	$date = "äÁèÃÐºØ";
 }	
 	return $date;
 }
 
-//function ������ʴ��ѹ���Ẻ���
+//function ·ÕèãªéáÊ´§ÇÑ¹·ÕèáººàµçÁ
 function fulldate($temp)
 {
 	$date = explode(" ", $temp);
 	$temp = $date[0];
-	$month = array("���Ҥ�", "����Ҿѹ��", "�չҤ�", "����¹", "����Ҥ�", "�Զع�¹", "�á�Ҥ�", "�ԧ�Ҥ�", "�ѹ��¹", "���Ҥ�", "��Ȩԡ�¹", "�ѹ�Ҥ�");
+	$month = array("Á¡ÃÒ¤Á", "¡ØÁÀÒ¾Ñ¹¸ì", "ÁÕ¹Ò¤Á", "àÁÉÒÂ¹", "¾ÄÉÀÒ¤Á", "ÁÔ¶Ø¹ÒÂ¹", "¡Ã¡®Ò¤Á", "ÊÔ§ËÒ¤Á", "¡Ñ¹ÂÒÂ¹", "µØÅÒ¤Á", "¾ÄÈ¨Ô¡ÒÂ¹", "¸Ñ¹ÇÒ¤Á");
 	$num = explode("-", $temp);		
 	$day = $num[2];
 	$tyear = $num[0] + 543;
-	$date = "<font class=\"normal_black\">".$day."</font>&nbsp;".$month[$num[1] - 1 ]."&nbsp;�.�.&nbsp;<font class=\"normal_black\">".$tyear."</font>";	
+	$date = "<font class=\"normal_black\">".$day."</font>&nbsp;".$month[$num[1] - 1 ]."&nbsp;¾.È.&nbsp;<font class=\"normal_black\">".$tyear."</font>";	
 	return $date;
 }
 
@@ -289,19 +289,19 @@ $width 		= (!isset($width) || $width == "") ? 801 : $width ;
 $height 		= (!isset($height) || $height == "") ? 801 : $height ; 
 
 	if($temp == "error_scale"){	
-		$msg = "<br><b class=\"warn\">Error</b> : ��Ҵ�ͧ�Ҿ�Թ�ҡ����˹����<br>��Ҵ�ٻ�Ҿ��ͧ����Թ $height x $width<br>";		
+		$msg = "<br><b class=\"warn\">Error</b> : ¢¹Ò´¢Í§ÀÒ¾à¡Ô¹¨Ò¡·Õè¡ÓË¹´äÇé<br>¢¹Ò´ÃÙ»ÀÒ¾µéÍ§äÁèà¡Ô¹ $height x $width<br>";		
 	} elseif($temp == "error_img") 	{	
-		$msg = "<br><b class=\"warn\">Error</b><br>�ٻẺ�ͧ file ���١��ͧ<br>�ٻ�Ҿ��ͧ�չ��ʡ���� jpg, jpeg ��� gif ��ҹ��<br>";		
+		$msg = "<br><b class=\"warn\">Error</b><br>ÃÙ»áºº¢Í§ file äÁè¶Ù¡µéÍ§<br>ÃÙ»ÀÒ¾µéÍ§ÁÕ¹ÒÁÊ¡ØÅà»ç¹ jpg, jpeg áÅÐ gif à·èÒ¹Ñé¹<br>";		
 	} elseif($temp == "error_type") 	{	
-		$msg = "<br><b class=\"warn\">Error</b><br>�ٻẺ�ͧ file ������������١��ͧ<br>";		
+		$msg = "<br><b class=\"warn\">Error</b><br>ÃÙ»áºº¢Í§ file ·Õè¹Óà¢éÒÁÒäÁè¶Ù¡µéÍ§<br>";		
 	} elseif($temp == "error_size") 	{	
-		$msg = "<br><b class=warn>Error</b><br>�ٻ��Ҵ�ͧ file �ҡ���ҷ���к���˹�<br>����ͧ�բ�Ҵ����Թ 800 Kilo Bytes<br>";
+		$msg = "<br><b class=warn>Error</b><br>ÃÙ»¢¹Ò´¢Í§ file ÁÒ¡¡ÇèÒ·ÕèÃÐºº¡ÓË¹´<br>ä¿ÅìµéÍ§ÁÕ¢¹Ò´äÁèà¡Ô¹ 800 Kilo Bytes<br>";
 	} elseif($temp == "error_upload") {	
-		$msg = "<br><b class=\"warn\">Warning</b><br>����ͼԴ��Ҵ㹡�� Upload ��������к�<br>�ô�Դ��ͼ�����<br>";			
+		$msg = "<br><b class=\"warn\">Warning</b><br>¾º¢éÍ¼Ô´¾ÅÒ´ã¹¡ÒÃ Upload à¢éÒÊÙèèÃÐºº<br>â»Ã´µÔ´µèÍ¼Ùé´ÙáÅ<br>";			
 	} elseif($temp == "error_cmod")	{	
-		$msg = "<br><b class=\"warn\">Warning</b><br>����ͼԴ��Ҵ㹡�� Upload ��������к�<br>�ô��Ǩ�ͺ CHMOD �ͧ Folder<br>";				
+		$msg = "<br><b class=\"warn\">Warning</b><br>¾º¢éÍ¼Ô´¾ÅÒ´ã¹¡ÒÃ Upload à¢éÒÊÙèèÃÐºº<br>â»Ã´µÃÇ¨ÊÍº CHMOD ¢Í§ Folder<br>";				
 	} elseif($temp == "error_doc"){	
-		$msg = "<br><b class=\"warn\">Warning</b><br>�ٻẺ������١��ͧ<br>�͡��õ�ͧ�չ��ʡ���� doc, xls ��� pdf ��ҹ��<br>";			
+		$msg = "<br><b class=\"warn\">Warning</b><br>ÃÙ»áººä¿ÅìäÁè¶Ù¡µéÍ§<br>àÍ¡ÊÒÃµéÍ§ÁÕ¹ÒÁÊ¡ØÅà»ç¹ doc, xls áÅÐ pdf à·èÒ¹Ñé¹<br>";			
 	} 
 $msg	 = ($msg != "") ? $msg.$button : "" ;
 return $msg;
@@ -326,7 +326,7 @@ function random($length){
     return $rndstring;
 }
 
-// function ������ʴ���������´��ҧ � �ͧ files ���зӡ�� upload
+// function ·ÕèãªéáÊ´§ÃÒÂÅÐàÍÕÂ´µèÒ§ æ ¢Í§ files ·Õè¨Ð·Ó¡ÒÃ upload
 function getFileExtension($str) 
 {
     $i = strrpos($str,".");
@@ -355,7 +355,7 @@ function post_decode($string) {
     return $res;
 }
 
-// ��ǹ�ͧ����ʴ������š����˹��
+// ÊèÇ¹¢Í§¡ÒÃáÊ´§¢éÍÁÙÅ¡ÒÃáºè§Ë¹éÒ
 function devide_page($all, $record, $kwd){
 $per_page		= 11;
 $page_all 		= ceil($all / $per_page);
@@ -406,13 +406,13 @@ if($page <= $per_page){
 		$table	= $table."&nbsp;<a href=\"?mode=$_GET[mode]&vmode=$_GET[vmode]&page=".$all.$kwd."\" style=\"text-decoration:none;\"><b>>></b></a>&nbsp;"; 
 	}	
 }                  
-	if ($max > 1){ //����ҡ���� 1 ˹��
-		$table   = $table." <A HREF=\"?mode=$_GET[mode]&vmode=$_GET[vmode]&e=1000000$kwd\" >�ʴ�������</A>";
+	if ($max > 1){ //¶éÒÁÒ¡¡ÇèÒ 1 Ë¹éÒ
+		$table   = $table." <A HREF=\"?mode=$_GET[mode]&vmode=$_GET[vmode]&e=1000000$kwd\" >áÊ´§·Ñé§ËÁ´</A>";
 	}
 
 	$table	= $table."</td>";
-	$table	= $table."<td width=\"10%\">".number_format($record, 0, "", ",")."&nbsp;��¡��&nbsp;</td>";
-	$table	= $table."<td width=\"10%\">".number_format($all, 0, "", ",")."&nbsp;˹��&nbsp;</td>";
+	$table	= $table."<td width=\"10%\">".number_format($record, 0, "", ",")."&nbsp;ÃÒÂ¡ÒÃ&nbsp;</td>";
+	$table	= $table."<td width=\"10%\">".number_format($all, 0, "", ",")."&nbsp;Ë¹éÒ&nbsp;</td>";
 	$table	= $table."</tr>";
 	$table	= $table."</table>";
 }
@@ -627,7 +627,7 @@ $arr3[$key]= $arr1[$key];
 $thai_array = array_reverse($arr3,TRUE);
 }
 //-------------------------------------------ajax_project_type
-//$arr_type = array("project"=>"�ç���","presale"=>"Presale","office"=>"�Ϳ���","marketing"=>"��Ҵ","RD"=>"�Ԩ�¾Ѳ��");
+//$arr_type = array("project"=>"â¤Ã§¡ÒÃ","presale"=>"Presale","office"=>"ÍÍ¿¿ÔÈ","marketing"=>"µÅÒ´","RD"=>"ÇÔ¨ÑÂ¾Ñ²¹Ò");
 function LimitText($s, $n) {
     if (strlen($s) > $n) {
         $s = substr($s, 0, $n) . "...";
@@ -635,7 +635,7 @@ function LimitText($s, $n) {
     return $s;
 }
 //------------------------------------------calendar
-/* �ѧ���� LastDay() ������Ѻ���ѹ����ش���¢ͧ��͹/�շ���к� ���͡�����ա���˹�觤���������͹/�շ���кع���ա���ѹ */
+/* ¿Ñ§¡ìªÑè¹ LastDay() ãªéÊÓËÃÑºËÒÇÑ¹·ÕèÊØ´·éÒÂ¢Í§à´×Í¹/»Õ·ÕèÃÐºØ ËÃ×Í¡ÅèÒÇÍÕ¡¹ÑÂË¹Öè§¤×ÍËÒÇèÒà´×Í¹/»Õ·ÕèÃÐºØ¹Ñé¹ÁÕ¡ÕèÇÑ¹ */
 function LastDay($m, $y) {
   for ($i=29; $i<=32; $i++) {  if(checkdate($m, $i, $y) == 0) {   return $i - 1;  }  }
 }
@@ -718,4 +718,102 @@ function taskData($ProjectCode='', $filter=''){
 	}
 	return $arrData;
 }
+//-----------------------------------------------config
+function CloseDB()
+{
+    global $conn;
+    mysql_close($conn);
+}
+function GetTripOwner($tid){
+	$sql = "select concat(t2.name,' ',t2.surname) from trip t1 inner join cos_user t2 on t1.userid=t2.userid where t1.tripid='$tid';" ;
+	$result = mysql_query($sql);
+	$rs = mysql_fetch_array($result);
+	return $rs[0];
+}
+function DateInput($d,$pre){
+	global $monthname;
+	if (!$d){
+		$d = (intval(date("Y")) + 543) . "-" . date("m-d"); // default date is today
+	}
+
+	$d1=explode("-",$d);
+?>
+วันที่
+<select name="<?=$pre?>_day" >
+<?
+for ($i=1;$i<=31;$i++){
+	if (intval($d1[2])== $i){
+		echo "<option SELECTED>" .  sprintf("%02d",$i) . "</option>";
+	}else{
+		echo "<option>" .  sprintf("%02d",$i) . "</option>";
+	}
+}
+?>
+</select>
+
+เดือน 
+<select name="<?=$pre?>_month" >
+<?
+for ($i=1;$i<=12;$i++){
+	$xi = sprintf("%02d",$i);
+	if (intval($d1[1])== $i){
+//		echo "<option value='$xi' SELECTED>$xi</option>";
+		echo "<option value='$xi' SELECTED>$monthname[$i]</option>";
+	}else{
+//		echo "<option value='$xi'>$xi</option>";
+		echo "<option value='$xi'>$monthname[$i]</option>";
+	}
+}
+?>
+</select>
+
+ปี พ.ศ. 
+<select name="<?=$pre?>_year" >
+<?
+$thisyear = date("Y") + 543;
+$y1 = $thisyear - 80;
+$y2 = $thisyear ;
+					
+for ($i=$y1;$i<=$y2;$i++){
+	if ($d1[0]== $i){
+		echo "<option SELECTED>$i</option>";
+	}else{
+		echo "<option>$i</option>";
+	}
+}
+?>
+</select>
+<?
+}
+function MakeDate($d){
+global $monthname;
+	if (!$d) return "";
+	
+	$d1=explode("-",$d);
+	return intval($d1[2]) . " " . $monthname[intval($d1[1])] . " " . $d1[0];
+}
+function DBThaiDate($d){
+global $monthname;
+	if (!$d) return "";
+	if ($d == "0000-00-00") return "";
+	
+	$d1=explode("-",$d);
+	return $d1[2] . "/" . $d1[1] . "/" . (intval($d1[0]) + 543);
+}
+function DBThaiLongDate($d){
+global $monthname;
+	if (!$d) return "";
+	if ($d == "0000-00-00") return "";
+	
+	$d1=explode("-",$d);
+	return intval($d1[2]) . " " . $monthname[intval($d1[1])] . " " . (intval($d1[0]) + 543);
+}
+function ThaiDate2DBDate($d){
+	if (!$d) return "";
+	if ($d == "00-00-0000") return "";
+	
+	$d1=explode("/",$d);
+	return (intval($d1[2]) - 543) . "-" . $d1[1] . "-" . $d1[0];
+}
+
 ?>
