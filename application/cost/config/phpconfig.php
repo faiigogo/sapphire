@@ -1,5 +1,6 @@
 <?php
 //session_start();
+include ("cost/function.php");
 
 if($_GET['application']!=""){
 	$_SESSION['application'] = $_GET['application'];
@@ -13,10 +14,10 @@ if($_SESSION["application"]==""){
 	echo '<meta http-equiv="Content-Type" content="text/html; charset=windows-874">';
 	echo '<center><table align="center"><tr><td align="center">';
 		echo '<DIV style="text-align:left;margin:20px;">';
-		echo '<a href="login.php?application=sapphire"><img src="images/star_full.png" border="0" align="absmiddle"/> √–∫∫∫—π∑÷°§Ë“„™È®Ë“¬ÕÕ°πÕ°æ◊Èπ∑’Ë Sapphire</a>';
+		echo '<a href="login.php?application=sapphire"><img src="images/star_full.png" border="0" align="absmiddle"/> ‡∏£‡∏∞‡∏ö‡∏ö‡∏ö‡∏±‡∏ô‡∏ó‡∏∂‡∏Å‡∏Ñ‡πà‡∏≤‡πÉ‡∏ä‡πâ‡∏à‡πà‡∏≤‡∏¢‡∏≠‡∏≠‡∏Å‡∏ô‡∏≠‡∏Å‡∏û‡∏∑‡πâ‡∏ô‡∏ó‡∏µ‡πà Sapphire</a>';
 		echo '</DIV>';
 		echo '<DIV style="text-align:left;margin:20px;">';
-		echo '<a href="login.php?application=gnis"><img src="images/star_full.png" border="0" align="absmiddle"/> √–∫∫∫—π∑÷°§Ë“„™È®Ë“¬ÕÕ°πÕ°æ◊Èπ∑’Ë Gnis</a>';
+		echo '<a href="login.php?application=gnis"><img src="images/star_full.png" border="0" align="absmiddle"/> ‡∏£‡∏∞‡∏ö‡∏ö‡∏ö‡∏±‡∏ô‡∏ó‡∏∂‡∏Å‡∏Ñ‡πà‡∏≤‡πÉ‡∏ä‡πâ‡∏à‡πà‡∏≤‡∏¢‡∏≠‡∏≠‡∏Å‡∏ô‡∏≠‡∏Å‡∏û‡∏∑‡πâ‡∏ô‡∏ó‡∏µ‡πà Gnis</a>';
 		echo '</DIV>';
 	echo '</td></td></table></center>';
 	exit();
@@ -81,8 +82,8 @@ $db_name = 'cost';
 		//echo "<meta http-equiv='refresh' content='0; url=http://192.168.2.13/sapphire/application/cost/login.php'>";
 	//header ("Location:  $r_url"); 	
 
-$monthname = array( "","¡°√“§¡","°ÿ¡¿“æ—π∏Ï","¡’π“§¡","‡¡…“¬π","æƒ…¿“§¡","¡‘∂ÿπ“¬π", "°√°Æ“§¡"," ‘ßÀ“§¡","°—π¬“¬π","µÿ≈“§¡","æƒ»®‘°“¬π","∏—π«“§¡");
-$shortmonth = array( "","¡.°.","°.æ.","¡’.§.","‡¡.¬.","æ.§.","¡‘.¬.", "°.§."," .§.","°.¬.","µ.§.","æ.¬.","∏.§.");
+$monthname = array( "","‡∏°‡∏Å‡∏£‡∏≤‡∏Ñ‡∏°","‡∏Å‡∏∏‡∏°‡∏†‡∏≤‡∏û‡∏±‡∏ô‡∏ò‡πå","‡∏°‡∏µ‡∏ô‡∏≤‡∏Ñ‡∏°","‡πÄ‡∏°‡∏©‡∏≤‡∏¢‡∏ô","‡∏û‡∏§‡∏©‡∏†‡∏≤‡∏Ñ‡∏°","‡∏°‡∏¥‡∏ñ‡∏∏‡∏ô‡∏≤‡∏¢‡∏ô", "‡∏Å‡∏£‡∏Å‡∏é‡∏≤‡∏Ñ‡∏°","‡∏™‡∏¥‡∏á‡∏´‡∏≤‡∏Ñ‡∏°","‡∏Å‡∏±‡∏ô‡∏¢‡∏≤‡∏¢‡∏ô","‡∏ï‡∏∏‡∏•‡∏≤‡∏Ñ‡∏°","‡∏û‡∏§‡∏®‡∏à‡∏¥‡∏Å‡∏≤‡∏¢‡∏ô","‡∏ò‡∏±‡∏ô‡∏ß‡∏≤‡∏Ñ‡∏°");
+$shortmonth = array( "","‡∏°.‡∏Å.","‡∏Å.‡∏û.","‡∏°‡∏µ.‡∏Ñ.","‡πÄ‡∏°.‡∏¢.","‡∏û.‡∏Ñ.","‡∏°‡∏¥.‡∏¢.", "‡∏Å.‡∏Ñ.","‡∏™.‡∏Ñ.","‡∏Å.‡∏¢.","‡∏ï.‡∏Ñ.","‡∏û.‡∏¢.","‡∏ò.‡∏Ñ.");
 
 /* open connection Mysql Server */
 
@@ -90,118 +91,8 @@ $shortmonth = array( "","¡.°.","°.æ.","¡’.§.","‡¡.¬.","æ.§.","¡‘.¬.", "°.§."," .
 	$iresult = mysql_query("SET character_set_results=tis-620");
 	$iresult = mysql_query("SET NAMES TIS620");	
     if (!$conn)
-	die ("‰¡Ë “¡“√∂µ‘¥µËÕ°—∫ MySql ‰¥È ");
+	die ("‡πÑ‡∏°‡πà‡∏™‡∏≤‡∏°‡∏≤‡∏£‡∏ñ‡∏ï‡∏¥‡∏î‡∏ï‡πà‡∏≠‡∏Å‡∏±‡∏ö MySql ‡πÑ‡∏î‡πâ ");
 	mysql_select_db($db_name,$conn) 
-	or die ("‰¡Ë “¡“√∂‡≈◊Õ°„™È∞“π¢ÈÕ¡Ÿ≈‰¥È ");
-
-
-/* ø—ß°Ï™—Ëπ Close connection */
-function CloseDB()
-{
-    global $conn;
-    mysql_close($conn);
-}
-
-function GetTripOwner($tid){
-	$sql = "select concat(t2.name,' ',t2.surname) from trip t1 inner join cos_user t2 on t1.userid=t2.userid where t1.tripid='$tid';" ;
-	$result = mysql_query($sql);
-	$rs = mysql_fetch_array($result);
-	return $rs[0];
-}
-
-function DateInput($d,$pre){
-	global $monthname;
-	if (!$d){
-		$d = (intval(date("Y")) + 543) . "-" . date("m-d"); // default date is today
-	}
-
-	$d1=explode("-",$d);
-?>
-«—π∑’Ë
-<select name="<?=$pre?>_day" >
-<?
-for ($i=1;$i<=31;$i++){
-	if (intval($d1[2])== $i){
-		echo "<option SELECTED>" .  sprintf("%02d",$i) . "</option>";
-	}else{
-		echo "<option>" .  sprintf("%02d",$i) . "</option>";
-	}
-}
-?>
-</select>
-
-‡¥◊Õπ 
-<select name="<?=$pre?>_month" >
-<?
-for ($i=1;$i<=12;$i++){
-	$xi = sprintf("%02d",$i);
-	if (intval($d1[1])== $i){
-//		echo "<option value='$xi' SELECTED>$xi</option>";
-		echo "<option value='$xi' SELECTED>$monthname[$i]</option>";
-	}else{
-//		echo "<option value='$xi'>$xi</option>";
-		echo "<option value='$xi'>$monthname[$i]</option>";
-	}
-}
-?>
-</select>
-
-ª’ æ.». 
-<select name="<?=$pre?>_year" >
-<?
-$thisyear = date("Y") + 543;
-$y1 = $thisyear - 80;
-$y2 = $thisyear ;
-					
-for ($i=$y1;$i<=$y2;$i++){
-	if ($d1[0]== $i){
-		echo "<option SELECTED>$i</option>";
-	}else{
-		echo "<option>$i</option>";
-	}
-}
-?>
-</select>
-<?
-}
-
-
-
-
-function MakeDate($d){
-global $monthname;
-	if (!$d) return "";
-	
-	$d1=explode("-",$d);
-	return intval($d1[2]) . " " . $monthname[intval($d1[1])] . " " . $d1[0];
-}
-
-function DBThaiDate($d){
-global $monthname;
-	if (!$d) return "";
-	if ($d == "0000-00-00") return "";
-	
-	$d1=explode("-",$d);
-	return $d1[2] . "/" . $d1[1] . "/" . (intval($d1[0]) + 543);
-}
-
-
-function DBThaiLongDate($d){
-global $monthname;
-	if (!$d) return "";
-	if ($d == "0000-00-00") return "";
-	
-	$d1=explode("-",$d);
-	return intval($d1[2]) . " " . $monthname[intval($d1[1])] . " " . (intval($d1[0]) + 543);
-}
-
-
-function ThaiDate2DBDate($d){
-	if (!$d) return "";
-	if ($d == "00-00-0000") return "";
-	
-	$d1=explode("/",$d);
-	return (intval($d1[2]) - 543) . "-" . $d1[1] . "-" . $d1[0];
-}
+	or die ("‡πÑ‡∏°‡πà‡∏™‡∏≤‡∏°‡∏≤‡∏£‡∏ñ‡πÄ‡∏•‡∏∑‡∏≠‡∏Å‡πÉ‡∏ä‡πâ‡∏ê‡∏≤‡∏ô‡∏Ç‡πâ‡∏≠‡∏°‡∏π‡∏•‡πÑ‡∏î‡πâ ");
 
 ?>
