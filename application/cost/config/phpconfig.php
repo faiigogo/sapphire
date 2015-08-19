@@ -1,5 +1,6 @@
 <?php
 //session_start();
+
 include ("cost/function.php");
 
 if($_GET['application']!=""){
@@ -94,5 +95,12 @@ $shortmonth = array( "","ม.ก.","ก.พ.","มี.ค.","เม.ย.","พ.�
 	die ("ไม่สามารถติดต่อกับ MySql ได้ ");
 	mysql_select_db($db_name,$conn) 
 	or die ("ไม่สามารถเลือกใช้ฐานข้อมูลได้ ");
+	
+	function GetTripOwner($tid){
+	$sql = "select concat(t2.name,' ',t2.surname) from trip t1 inner join cos_user t2 on t1.userid=t2.userid where t1.tripid='$tid';" ;
+	$result = mysql_query($sql);
+	$rs = mysql_fetch_array($result);
+	return $rs[0];
+}
 
 ?>
