@@ -89,21 +89,21 @@ function swapdate($temp){
 	return $ndate;
 }
 
-//function ·ÕèãªéáÊ´§ÇÑ¹·ÕèáººàµçÁ ãªéã¹ edocument
+//function ที่ใช้แสดงวันที่แบบเต็ม ใช้ใน edocument
 function daythai($temp){
 if($temp != "0000-00-00"){
 
-	$month 	= array("Á¡ÃÒ¤Á", "¡ØÁÀÒ¾Ñ¹¸ì", "ÁÕ¹Ò¤Á", "àÁÉÒÂ¹", "¾ÄÉÀÒ¤Á", "ÁÔ¶Ø¹ÒÂ¹", "¡Ã¡®Ò¤Á", "ÊÔ§ËÒ¤Á", "¡Ñ¹ÂÒÂ¹", "µØÅÒ¤Á", "¾ÄÈ¨Ô¡ÒÂ¹", "¸Ñ¹ÇÒ¤Á"); 
+	$month 	= array("มกราคม", "กุมภาพันธ์", "มีนาคม", "เมษายน", "พฤษภาคม", "มิถุนายน", "กรกฎาคม", "สิงหาคม", "กันยายน", "ตุลาคม", "พฤศจิกายน", "ธันวาคม"); 
 	$num 	= explode("-", $temp);			
 	if($num[0] == "0000"){
-	  $date 	= "äÁèÃÐºØ";
+	  $date 	= "ไม่ระบุ";
 	} else {
 	  $tyear = $num[0] +  543;
 	  $date 	= remove_zero($num[2])."&nbsp;".$month[$num[1] - 1 ]."&nbsp;".$tyear;	
 	}
 
 } else {
-	$date = "äÁèÃÐºØ";
+	$date = "ไม่ระบุ";
 }	
 	return $date;
 }
@@ -111,31 +111,31 @@ if($temp != "0000-00-00"){
 function shortday($temp){
 if($temp != "0000-00-00"){
 
-	$month 	= array("Á.¤.", "¡.¾.", "ÁÕ.¤.", "Á.Â.", "¾.¤.", "ÁÔ.Â.", "¡.¤.", "Ê.¤.", "¡.Â.", "µ.¤.", "¾.Â.", "¸.¤."); 
+	$month 	= array("ม.ค.", "ก.พ.", "มี.ค.", "ม.ย.", "พ.ค.", "มิ.ย.", "ก.ค.", "ส.ค.", "ก.ย.", "ต.ค.", "พ.ย.", "ธ.ค."); 
 	$num 	= explode("-", $temp);			
 	if($num[0] == "0000"){
-	  $date 	= "äÁèÃÐºØ";
+	  $date 	= "ไม่ระบุ";
 	} else {
 	  $tyear = $num[0] +  543;
 	  $date 	= remove_zero($num[2])."&nbsp;".$month[$num[1] - 1 ]."&nbsp;".$tyear;	
 	}
 
 } else {
-	$date = "äÁèÃÐºØ";
+	$date = "ไม่ระบุ";
 }	
 	return $date;
 }
 
-//function ·ÕèãªéáÊ´§ÇÑ¹·ÕèáººàµçÁ
+//function ที่ใช้แสดงวันที่แบบเต็ม
 function fulldate($temp)
 {
 	$date = explode(" ", $temp);
 	$temp = $date[0];
-	$month = array("Á¡ÃÒ¤Á", "¡ØÁÀÒ¾Ñ¹¸ì", "ÁÕ¹Ò¤Á", "àÁÉÒÂ¹", "¾ÄÉÀÒ¤Á", "ÁÔ¶Ø¹ÒÂ¹", "¡Ã¡®Ò¤Á", "ÊÔ§ËÒ¤Á", "¡Ñ¹ÂÒÂ¹", "µØÅÒ¤Á", "¾ÄÈ¨Ô¡ÒÂ¹", "¸Ñ¹ÇÒ¤Á");
+	$month = array("มกราคม", "กุมภาพันธ์", "มีนาคม", "เมษายน", "พฤษภาคม", "มิถุนายน", "กรกฎาคม", "สิงหาคม", "กันยายน", "ตุลาคม", "พฤศจิกายน", "ธันวาคม");
 	$num = explode("-", $temp);		
 	$day = $num[2];
 	$tyear = $num[0] + 543;
-	$date = "<font class=\"normal_black\">".$day."</font>&nbsp;".$month[$num[1] - 1 ]."&nbsp;¾.È.&nbsp;<font class=\"normal_black\">".$tyear."</font>";	
+	$date = "<font class=\"normal_black\">".$day."</font>&nbsp;".$month[$num[1] - 1 ]."&nbsp;พ.ศ.&nbsp;<font class=\"normal_black\">".$tyear."</font>";	
 	return $date;
 }
 
@@ -289,19 +289,19 @@ $width 		= (!isset($width) || $width == "") ? 801 : $width ;
 $height 		= (!isset($height) || $height == "") ? 801 : $height ; 
 
 	if($temp == "error_scale"){	
-		$msg = "<br><b class=\"warn\">Error</b> : ¢¹Ò´¢Í§ÀÒ¾à¡Ô¹¨Ò¡·Õè¡ÓË¹´äÇé<br>¢¹Ò´ÃÙ»ÀÒ¾µéÍ§äÁèà¡Ô¹ $height x $width<br>";		
+		$msg = "<br><b class=\"warn\">Error</b> : ขนาดของภาพเกินจากที่กำหนดไว้<br>ขนาดรูปภาพต้องไม่เกิน $height x $width<br>";		
 	} elseif($temp == "error_img") 	{	
-		$msg = "<br><b class=\"warn\">Error</b><br>ÃÙ»áºº¢Í§ file äÁè¶Ù¡µéÍ§<br>ÃÙ»ÀÒ¾µéÍ§ÁÕ¹ÒÁÊ¡ØÅà»ç¹ jpg, jpeg áÅÐ gif à·èÒ¹Ñé¹<br>";		
+		$msg = "<br><b class=\"warn\">Error</b><br>รูปแบบของ file ไม่ถูกต้อง<br>รูปภาพต้องมีนามสกุลเป็น jpg, jpeg และ gif เท่านั้น<br>";		
 	} elseif($temp == "error_type") 	{	
-		$msg = "<br><b class=\"warn\">Error</b><br>ÃÙ»áºº¢Í§ file ·Õè¹Óà¢éÒÁÒäÁè¶Ù¡µéÍ§<br>";		
+		$msg = "<br><b class=\"warn\">Error</b><br>รูปแบบของ file ที่นำเข้ามาไม่ถูกต้อง<br>";		
 	} elseif($temp == "error_size") 	{	
-		$msg = "<br><b class=warn>Error</b><br>ÃÙ»¢¹Ò´¢Í§ file ÁÒ¡¡ÇèÒ·ÕèÃÐºº¡ÓË¹´<br>ä¿ÅìµéÍ§ÁÕ¢¹Ò´äÁèà¡Ô¹ 800 Kilo Bytes<br>";
+		$msg = "<br><b class=warn>Error</b><br>รูปขนาดของ file มากกว่าที่ระบบกำหนด<br>ไฟล์ต้องมีขนาดไม่เกิน 800 Kilo Bytes<br>";
 	} elseif($temp == "error_upload") {	
-		$msg = "<br><b class=\"warn\">Warning</b><br>¾º¢éÍ¼Ô´¾ÅÒ´ã¹¡ÒÃ Upload à¢éÒÊÙèèÃÐºº<br>â»Ã´µÔ´µèÍ¼Ùé´ÙáÅ<br>";			
+		$msg = "<br><b class=\"warn\">Warning</b><br>พบข้อผิดพลาดในการ Upload เข้าสู่่ระบบ<br>โปรดติดต่อผู้ดูแล<br>";			
 	} elseif($temp == "error_cmod")	{	
-		$msg = "<br><b class=\"warn\">Warning</b><br>¾º¢éÍ¼Ô´¾ÅÒ´ã¹¡ÒÃ Upload à¢éÒÊÙèèÃÐºº<br>â»Ã´µÃÇ¨ÊÍº CHMOD ¢Í§ Folder<br>";				
+		$msg = "<br><b class=\"warn\">Warning</b><br>พบข้อผิดพลาดในการ Upload เข้าสู่่ระบบ<br>โปรดตรวจสอบ CHMOD ของ Folder<br>";				
 	} elseif($temp == "error_doc"){	
-		$msg = "<br><b class=\"warn\">Warning</b><br>ÃÙ»áººä¿ÅìäÁè¶Ù¡µéÍ§<br>àÍ¡ÊÒÃµéÍ§ÁÕ¹ÒÁÊ¡ØÅà»ç¹ doc, xls áÅÐ pdf à·èÒ¹Ñé¹<br>";			
+		$msg = "<br><b class=\"warn\">Warning</b><br>รูปแบบไฟล์ไม่ถูกต้อง<br>เอกสารต้องมีนามสกุลเป็น doc, xls และ pdf เท่านั้น<br>";			
 	} 
 $msg	 = ($msg != "") ? $msg.$button : "" ;
 return $msg;
@@ -326,7 +326,7 @@ function random($length){
     return $rndstring;
 }
 
-// function ·ÕèãªéáÊ´§ÃÒÂÅÐàÍÕÂ´µèÒ§ æ ¢Í§ files ·Õè¨Ð·Ó¡ÒÃ upload
+// function ที่ใช้แสดงรายละเอียดต่าง ๆ ของ files ที่จะทำการ upload
 function getFileExtension($str) 
 {
     $i = strrpos($str,".");
@@ -355,7 +355,7 @@ function post_decode($string) {
     return $res;
 }
 
-// ÊèÇ¹¢Í§¡ÒÃáÊ´§¢éÍÁÙÅ¡ÒÃáºè§Ë¹éÒ
+// ส่วนของการแสดงข้อมูลการแบ่งหน้า
 function devide_page($all, $record, $kwd){
 $per_page		= 11;
 $page_all 		= ceil($all / $per_page);
@@ -406,13 +406,13 @@ if($page <= $per_page){
 		$table	= $table."&nbsp;<a href=\"?mode=$_GET[mode]&vmode=$_GET[vmode]&page=".$all.$kwd."\" style=\"text-decoration:none;\"><b>>></b></a>&nbsp;"; 
 	}	
 }                  
-	if ($max > 1){ //¶éÒÁÒ¡¡ÇèÒ 1 Ë¹éÒ
-		$table   = $table." <A HREF=\"?mode=$_GET[mode]&vmode=$_GET[vmode]&e=1000000$kwd\" >áÊ´§·Ñé§ËÁ´</A>";
+	if ($max > 1){ //ถ้ามากกว่า 1 หน้า
+		$table   = $table." <A HREF=\"?mode=$_GET[mode]&vmode=$_GET[vmode]&e=1000000$kwd\" >แสดงทั้งหมด</A>";
 	}
 
 	$table	= $table."</td>";
-	$table	= $table."<td width=\"10%\">".number_format($record, 0, "", ",")."&nbsp;ÃÒÂ¡ÒÃ&nbsp;</td>";
-	$table	= $table."<td width=\"10%\">".number_format($all, 0, "", ",")."&nbsp;Ë¹éÒ&nbsp;</td>";
+	$table	= $table."<td width=\"10%\">".number_format($record, 0, "", ",")."&nbsp;รายการ&nbsp;</td>";
+	$table	= $table."<td width=\"10%\">".number_format($all, 0, "", ",")."&nbsp;หน้า&nbsp;</td>";
 	$table	= $table."</tr>";
 	$table	= $table."</table>";
 }
@@ -627,7 +627,7 @@ $arr3[$key]= $arr1[$key];
 $thai_array = array_reverse($arr3,TRUE);
 }
 //-------------------------------------------ajax_project_type
-//$arr_type = array("project"=>"â¤Ã§¡ÒÃ","presale"=>"Presale","office"=>"ÍÍ¿¿ÔÈ","marketing"=>"µÅÒ´","RD"=>"ÇÔ¨ÑÂ¾Ñ²¹Ò");
+//$arr_type = array("project"=>"โครงการ","presale"=>"Presale","office"=>"ออฟฟิศ","marketing"=>"ตลาด","RD"=>"วิจัยพัฒนา");
 function LimitText($s, $n) {
     if (strlen($s) > $n) {
         $s = substr($s, 0, $n) . "...";
@@ -635,7 +635,7 @@ function LimitText($s, $n) {
     return $s;
 }
 //------------------------------------------calendar
-/* ¿Ñ§¡ìªÑè¹ LastDay() ãªéÊÓËÃÑºËÒÇÑ¹·ÕèÊØ´·éÒÂ¢Í§à´×Í¹/»Õ·ÕèÃÐºØ ËÃ×Í¡ÅèÒÇÍÕ¡¹ÑÂË¹Öè§¤×ÍËÒÇèÒà´×Í¹/»Õ·ÕèÃÐºØ¹Ñé¹ÁÕ¡ÕèÇÑ¹ */
+/* ฟังก์ชั่น LastDay() ใช้สำหรับหาวันที่สุดท้ายของเดือน/ปีที่ระบุ หรือกล่าวอีกนัยหนึ่งคือหาว่าเดือน/ปีที่ระบุนั้นมีกี่วัน */
 function LastDay($m, $y) {
   for ($i=29; $i<=32; $i++) {  if(checkdate($m, $i, $y) == 0) {   return $i - 1;  }  }
 }
@@ -724,12 +724,6 @@ function CloseDB()
     global $conn;
     mysql_close($conn);
 }
-function GetTripOwner($tid){
-	$sql = "select concat(t2.name,' ',t2.surname) from trip t1 inner join cos_user t2 on t1.userid=t2.userid where t1.tripid='$tid';" ;
-	$result = mysql_query($sql);
-	$rs = mysql_fetch_array($result);
-	return $rs[0];
-}
 function DateInput($d,$pre){
 	global $monthname;
 	if (!$d){
@@ -815,5 +809,6 @@ function ThaiDate2DBDate($d){
 	$d1=explode("/",$d);
 	return (intval($d1[2]) - 543) . "-" . $d1[1] . "-" . $d1[0];
 }
+
 
 ?>
