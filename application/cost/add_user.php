@@ -1,6 +1,6 @@
 <?
 /*****************************************************************************
-Function		: แก้ไขข้อมูลของ epm_staff
+Function		: รกยกรฉรคยขยขรฉรรรร…ยขรยง epm_staff
 Version			: 1.0
 Last Modified	: 16/8/2548
 Changes		:
@@ -8,28 +8,11 @@ Changes		:
 set_time_limit(0);
 include ("checklogin.php");
 include ("config/phpconfig.php");
-$report_title = "บุคลากร";
+include ("cost/function.php");
+$report_title = "ยบรยคร…ร’ยกร";
 $org_id = intval($org_id);
 $epm_mode = "off";
 
-function mk_username($ename,$esurname){
-	$uname = strtolower($ename . "." . substr($esurname,0,3));
-	$lastuname = $uname;
-	$n = 3; $k=0;
-	$SQL = "select userid from cost.cos_user where username='$uname' ";
-	$Result_MK = mysql_query($SQL);
-	if ( @mysql_num_rows($Result_MK) > '0' ){
-		$n++;
-		if (strlen($esurname) > $n){
-			$uname = strtolower($ename . "." . substr($esurname,0,$n));
-			$lastuname = $uname;
-		}else{
-			$k++;
-			$uname = $lastuname . $k;
-		} //if
-	} // while
-	return $uname;
-}
 $user_id = $_SESSION[userid_origin] ? $_SESSION[userid_origin] : $_SESSION[userid];
 $id=($pri =='100')?$id : $user_id;
 
@@ -49,7 +32,7 @@ if ($_SERVER[REQUEST_METHOD] == "POST"){
 			$id_insert= mysql_insert_id();
 			$sql_acc="INSERT INTO cost.type_accrone SET
 			`id_cost_accrone`='511013-$id_insert',
-			`type_accrone`='ค่าเบี้ยเลี้ยง-$staffname',
+			`type_accrone`='ยครจร’ร ยบร•รฉรร ร…ร•รฉรยง-$staffname',
 			`id_type_cost`='5',
 			`userid` = '$id_insert' ";
 			@mysql_query($sql_acc);
@@ -67,7 +50,7 @@ if ($_SERVER[REQUEST_METHOD] == "POST"){
 			$id_insert= mysql_insert_id();
 			$sql_acc="INSERT INTO cost_gnis.type_accrone SET
 			`id_cost_accrone`='511013-$id_insert',
-			`type_accrone`='ค่าเบี้ยเลี้ยง-$staffname',
+			`type_accrone`='ยครจร’ร ยบร•รฉรร ร…ร•รฉรยง-$staffname',
 			`id_type_cost`='5',
 			`userid` = '$id_insert' ";
 			@mysql_query($sql_acc);
@@ -94,7 +77,7 @@ if ($_SERVER[REQUEST_METHOD] == "POST"){
 			@mysql_query($sql_g);
 		}
 		//echo "<pre> $sql  <hr>";	print_r($_POST);	echo "</pre>"; die;
-	echo "<script language='javascript'>alert('บันทึกข้อมูล $staffname แล้ว');</script>" ;
+	echo "<script language='javascript'>alert('ยบร‘ยนยทร–ยกยขรฉรรรร… $staffname รกร…รฉร');</script>" ;
 
 	if($pri =='100'){
 	echo "<meta http-equiv='refresh' content='0;url=list_user.php'>" ;
@@ -115,18 +98,18 @@ if ($_SERVER[REQUEST_METHOD] == "POST"){
 function checkFields() {
 	missinginfo1 = "";
 	missinginfo = "";
-	if (document.form1.staffname.value == "")  {	missinginfo1 += "\n- ช่องชื่อ ไม่สามารถเป็นค่าว่าง"; }		
-	if (document.form1.staffsurname.value == "")  {	missinginfo1 += "\n- ช่องนามสกุล ไม่สามารถเป็นค่าว่าง"; }		
+	if (document.form1.staffname.value == "")  {	missinginfo1 += "\n- ยชรจรยงยชร—รจร รครรจรร’รร’รยถร ยปรงยนยครจร’รรจร’ยง"; }		
+	if (document.form1.staffsurname.value == "")  {	missinginfo1 += "\n- ยชรจรยงยนร’รรยกรร… รครรจรร’รร’รยถร ยปรงยนยครจร’รรจร’ยง"; }		
 	<? if($pri!="100"){?>
-	if (document.form1.engname.value == "")  {	missinginfo1 += "\n- ช่องชื่อ(อังกฤษ) ไม่สามารถเป็นค่าว่าง"; }		
-	if (document.form1.engsurname.value == "")  {	missinginfo1 += "\n- ช่องนามสกุล(อังกฤษ) ไม่สามารถเป็นค่าว่าง"; }		
+	if (document.form1.engname.value == "")  {	missinginfo1 += "\n- ยชรจรยงยชร—รจร(รร‘ยงยกรร) รครรจรร’รร’รยถร ยปรงยนยครจร’รรจร’ยง"; }		
+	if (document.form1.engsurname.value == "")  {	missinginfo1 += "\n- ยชรจรยงยนร’รรยกรร…(รร‘ยงยกรร) รครรจรร’รร’รยถร ยปรงยนยครจร’รรจร’ยง"; }		
 	<? }?>
 	if (missinginfo1 != "") { 
-		missinginfo += "ไม่สามารถเพิ่มข้อมูลได้  เนื่องจาก \n";
+		missinginfo += "รครรจรร’รร’รยถร ยพร”รจรยขรฉรรรร…รคยดรฉ  ร ยนร—รจรยงยจร’ยก \n";
 		missinginfo +="_____________________________\n";
 		missinginfo = missinginfo + missinginfo1  ;
 		missinginfo += "\n___________________________";
-		missinginfo += "\nกรุณาตรวจสอบ อีกครั้ง";
+		missinginfo += "\nยกรรยณร’ยตรรยจรรยบ รร•ยกยครร‘รฉยง";
 		alert(missinginfo);
 		return false;
 		}
@@ -156,7 +139,7 @@ function checkFields() {
 <INPUT TYPE="hidden" NAME="xpassword" VALUE="<?=$pwd?>"  >
 <table border=0 align=center cellspacing=1 cellpadding=3 bgcolor="#DDDDDD" width="98%">
     <tr bgcolor="#a3b2cc"> 
-      <td colspan=2> &nbsp; <FONT COLOR="WHITE" style="font-size:14pt;"><B><?=$title?>ข้อมูล<?=$report_title?></B></font></td>
+      <td colspan=2> &nbsp; <FONT COLOR="WHITE" style="font-size:14pt;"><B><?=$title?>ยขรฉรรรร…<?=$report_title?></B></font></td>
     </tr>
 <?
 
@@ -176,50 +159,50 @@ function checkFields() {
 ?>
     <? if($epm_mode=="ON"){?>
 	<tr bgcolor=white valign=top>
-	  <td class="link_back">ตำแหน่ง(ระบบจะใช้ในการแสดงผล)</td>
+	  <td class="link_back">ยตร“รกรยนรจยง(รรยบยบยจรรฃยชรฉรฃยนยกร’รรกรยดยงยผร…)</td>
 	  <td><INPUT TYPE="text" NAME="title" VALUE="<?=$rs[title]?>" size="60" maxlength=200 class=inputbox <?=$lock?>></td>
     </tr>
     <? } ?>
     <? if($epm_mode=="ON"){?>
 	<tr bgcolor=white valign=top> 
-      <td class="link_back">คำนำหน้า (ไทย) </td>
+      <td class="link_back">ยคร“ยนร“รยนรฉร’ (รคยทร) </td>
       <td> 
         <INPUT TYPE="text" NAME="prename" VALUE="<?=$rs[prename]?>" size="30" maxlength=50 class=inputbox <?=$lock?>>      </td>
     </tr>
     <? } ?>
 
 	<tr bgcolor=white valign=top> 
-      <td class="link_back">ชื่อ (ไทย) <FONT COLOR="RED">*</FONT></td>
+      <td class="link_back">ยชร—รจร (รคยทร) <FONT COLOR="RED">*</FONT></td>
       <td> 
         <INPUT TYPE="text" NAME="staffname" VALUE="<?=$rs[name]?>" size="60" maxlength=200 class=inputbox <?=$lock?>>      </td>
     </tr>
 
 	<tr bgcolor=white valign=top> 
-      <td class="link_back">นามสกุล (ไทย) <FONT COLOR="RED">*</FONT></td>
+      <td class="link_back">ยนร’รรยกรร… (รคยทร) <FONT COLOR="RED">*</FONT></td>
       <td> 
         <INPUT TYPE="text" NAME="staffsurname" VALUE="<?=$rs[surname]?>" size="60" maxlength=200 class=inputbox <?=$lock?>>      </td>
     </tr>
     <? if($epm_mode=="ON"){?>
 	<tr bgcolor=white valign=top> 
-      <td class="link_back">คำนำหน้า (อังกฤษ) </td>
+      <td class="link_back">ยคร“ยนร“รยนรฉร’ (รร‘ยงยกรร) </td>
       <td> 
         <INPUT TYPE="text" NAME="engprename" VALUE="<?=$rs[engprename]?>" size="30" maxlength=50 class=inputbox <?=$lock?>>      </td>
     </tr>
 	<? }?>
 	<tr bgcolor=white valign=top> 
-      <td class="link_back">ชื่อ (อังกฤษ) <FONT COLOR="RED">*</FONT></td>
+      <td class="link_back">ยชร—รจร (รร‘ยงยกรร) <FONT COLOR="RED">*</FONT></td>
       <td> 
         <INPUT TYPE="text" NAME="engname" VALUE="<?=$rs[engname]?>" size="60" maxlength=200 class=inputbox <?=$lock?>>      </td>
     </tr>
 
 	<tr bgcolor=white valign=top> 
-      <td class="link_back">นามสกุล (อังกฤษ) <FONT COLOR="RED">*</FONT></td>
+      <td class="link_back">ยนร’รรยกรร… (รร‘ยงยกรร) <FONT COLOR="RED">*</FONT></td>
       <td>
         <INPUT TYPE="text" NAME="engsurname" VALUE="<?=$rs[engsurname]?>" size="60" maxlength=200 class=inputbox <?=$lock?>>      </td>
     </tr>
     <? if($epm_mode=="ON"){?>
 	<tr bgcolor=white valign=top> 
-      <td class="link_back">เลขบัตรประจำตัว</td>
+      <td class="link_back">ร ร…ยขยบร‘ยตรยปรรยจร“ยตร‘ร</td>
       <td><INPUT TYPE="text" NAME="card_id" VALUE="<?=$rs[card_id]?>" size="20" maxlength=30 class=inputbox <?=$lock?>>      </td>
     </tr>
 
@@ -229,11 +212,11 @@ function checkFields() {
     </tr>
 
 	<tr bgcolor=white valign=top>
-	  <td class="link_back">ประเภท</td>
+	  <td class="link_back">ยปรรร ร€ยท</td>
 	  <td>
 	  <select name="sex" <?=$lock?> style="width:150px;">
 <?
-$sex_array = array("M"=>"ชาย","F"=>"หญิง", "O"=>"องค์กร");	
+$sex_array = array("M"=>"ยชร’ร","F"=>"รยญร”ยง", "O"=>"รยงยครฌยกร");	
 foreach ($sex_array as $sex=>$caption){
 	if ($rs[sex] == $sex) $sel="SELECTED"; else $sel="";
 	echo "<option value='$sex' $sel>$caption";
@@ -243,25 +226,25 @@ foreach ($sex_array as $sex=>$caption){
 </tr>
 
 	<tr bgcolor=white valign=top>
-	  <td class="link_back">ที่อยู่</td>
+	  <td class="link_back">ยทร•รจรรรรจ</td>
 	  <td><TEXTAREA NAME="address" ROWS="3" COLS="60" <?=$lock?>><?=$rs[address]?></TEXTAREA></td>
     </tr>
 
 	<tr bgcolor=white valign=top>
-	  <td class="link_back">โทรศัพท์</td>
+	  <td class="link_back">รขยทรรร‘ยพยทรฌ</td>
       <td> <INPUT TYPE="text" NAME="telno" VALUE="<?=$rs[telno]?>" size="60" maxlength=100 class=inputbox <?=$lock?>>      </td>
     </tr>
 
 
 	<tr bgcolor=white valign=top>
-	  <td class="link_back">หมายเหตุ</td>
+	  <td class="link_back">รรร’รร รยตร</td>
 	  <td><TEXTAREA NAME="comment" ROWS="3" COLS="60" <?=$lock?>><?=$rs[comment]?></TEXTAREA></td>
     </tr>
 <? }?>
     <tr bgcolor="#888899" valign=top> 
       <td colspan=2 align=right> 
-        <INPUT TYPE="submit" VALUE="    บันทึก    " CLASS=xbutton>
-        <INPUT TYPE="button" VALUE=" กลับหน้าหลัก  " class=xbutton ONCLICK="<?=$pri=="100"?"location.href='list_user.php'":"window.close()"?>">	  </td>
+        <INPUT TYPE="submit" VALUE="    ยบร‘ยนยทร–ยก    " CLASS=xbutton>
+        <INPUT TYPE="button" VALUE=" ยกร…ร‘ยบรยนรฉร’รร…ร‘ยก  " class=xbutton ONCLICK="<?=$pri=="100"?"location.href='list_user.php'":"window.close()"?>">	  </td>
     </tr>
   </table>
 </form>
