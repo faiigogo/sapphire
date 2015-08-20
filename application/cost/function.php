@@ -809,6 +809,24 @@ function ThaiDate2DBDate($d){
 	$d1=explode("/",$d);
 	return (intval($d1[2]) - 543) . "-" . $d1[1] . "-" . $d1[0];
 }
-
+//-------------------------Add_user
+function mk_username($ename,$esurname){
+	$uname = strtolower($ename . "." . substr($esurname,0,3));
+	$lastuname = $uname;
+	$n = 3; $k=0;
+	$SQL = "select userid from cost.cos_user where username='$uname' ";
+	$Result_MK = mysql_query($SQL);
+	if ( @mysql_num_rows($Result_MK) > '0' ){
+		$n++;
+		if (strlen($esurname) > $n){
+			$uname = strtolower($ename . "." . substr($esurname,0,$n));
+			$lastuname = $uname;
+		}else{
+			$k++;
+			$uname = $lastuname . $k;
+		} //if
+	} // while
+	return $uname;
+}
 
 ?>
